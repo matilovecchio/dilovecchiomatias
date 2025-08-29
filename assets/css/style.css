@@ -61,7 +61,7 @@ header nav{ flex:1; display:flex; justify-content:flex-end; }
 #home{ padding:0; }
 .hero-banner{
   position:relative; height:500px;
-  background-image:url("/assets/img/imagen de portada.png");
+  background-image:url("../img/imagen de portada.png");
   background-size:cover; background-position:center;
 }
 .hero-photo{ position:absolute; right:0; bottom:0; width:223px; height:220px; object-fit:cover; display:block; border:0; }
