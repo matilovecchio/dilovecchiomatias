@@ -9,8 +9,8 @@ GENERALES
 .section-title{
   font: 100 64px "Public Sans", sans-serif;
   padding: 8px;
-  background:#000;
-  color:#fff;
+  background:#353535;
+  color:#fafafa;
   display:inline-block;
   margin-bottom:0;
 }
@@ -18,8 +18,8 @@ GENERALES
 /* Estilo base para todos los botones */
 .btn{
   padding:10px 20px;
-  background:#000;
-  color:#fff;
+  background:#353535;
+  color:#fafafa;
   text-decoration:none;
   font-family:"Public Sans", sans-serif;
   font-size:24px;
@@ -106,7 +106,7 @@ header nav{ flex:1; display:flex; justify-content:flex-end; }
 .data-container{ display:flex; flex-direction:column; gap:36px; height:100%; align-self:stretch; }
 .data-row{ display:flex; flex-direction:row; align-items:center; gap:20px; border-bottom:4px solid #353535; }
 .data-label{ min-width:466px; height:54px; padding:8px 20px; border-width:4px 4px 0 4px; border-style:solid; border-color:#353535; font-size:32px; font-weight:500; display:flex; align-items:center; justify-content:flex-end; }
-.data-value{ font-size:32px; font-weight:400; color:#000; }
+.data-value{ font-size:32px; font-weight:400; color:#353535; }
 .data-value a{ color:inherit; text-decoration:none; font-size:inherit; }
 .about-gallery{ display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
 .about-img-small{ width:100%; height:367px; object-fit:cover; background:#555; display:block; }
