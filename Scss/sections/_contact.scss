@@ -1,0 +1,140 @@
+/* ========== CONTACT ========== */
+#contact {
+    font-family: "Public Sans", sans-serif;
+    --stroke: #353535;
+    --bw: 4px;
+    --pl: 16px;
+    padding-top: 32px;
+
+    .contact-layout {
+        display: grid;
+        grid-template-columns: minmax(260px, 1fr) minmax(0, 2fr);
+        align-items: stretch;
+    }
+
+    .contact-media {
+        margin: 0;
+        overflow: hidden;
+        min-height: 0;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+        border-left: var(--bw) solid var(--stroke);
+        border-top: var(--bw) solid var(--stroke);
+        padding: 32px 0 0 var(--pl);
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            label {
+                margin: 0;
+                font: 700 24px "Public Sans", sans-serif;
+                color: var(--stroke);
+            }
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            box-sizing: border-box;
+            padding: 8px 20px;
+            border: var(--bw) solid var(--stroke);
+            background: #FAFAFA;
+            color: var(--stroke);
+            font: 400 24px "Public Sans", sans-serif;
+            outline: none;
+            margin-left: calc(-1 * (var(--pl) + var(--bw)));
+            width: calc(100% + var(--pl) + var(--bw));
+        }
+
+        textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+
+        .checks {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding-left: var(--pl);
+            margin-left: calc(-1 * (var(--pl) + var(--bw)));
+            width: calc(100% + var(--pl) + var(--bw));
+
+            .checks-title {
+                margin: 0;
+                font: 700 24px "Public Sans", sans-serif;
+                color: var(--stroke);
+            }
+
+            .checks-list {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .check-item {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                font: 400 24px "Public Sans", sans-serif;
+                color: var(--stroke);
+                line-height: 1.2;
+
+                .check {
+                    appearance: none;
+                    width: 32px;
+                    height: 32px;
+                    border: 2px solid var(--stroke);
+                    background: #FAFAFA;
+                    border-radius: 2px;
+                    position: relative;
+                    cursor: pointer;
+
+                    &:checked::after {
+                        content: "";
+                        position: absolute;
+                        left: 9px;
+                        top: 3px;
+                        width: 10px;
+                        height: 18px;
+                        border-right: 4px solid var(--stroke);
+                        border-bottom: 4px solid var(--stroke);
+                        transform: rotate(45deg);
+                    }
+
+                    &:focus-visible {
+                        outline: 2px dashed var(--stroke);
+                        outline-offset: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 900px) {
+        .contact-layout {
+            grid-template-columns: 1fr;
+        }
+
+        .contact-form {
+            border-left: none;
+            padding-left: 0;
+        }
+
+        .contact-media img {
+            height: auto;
+        }
+    }
+}

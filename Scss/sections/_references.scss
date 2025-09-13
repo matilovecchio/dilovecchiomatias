@@ -1,0 +1,209 @@
+/* =======================  REFERENCES  ======================= */
+#references {
+  --stroke: #353535;
+  --gap: 24px;
+  --marquee-duration: 15s;
+  --pad-x: 48px;
+  --pad-y: 64px;
+  --max-card-text: 520px;
+  --hover-bleed: 32px;
+  --b: 4px;
+
+  font-family: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #FAFAFA;
+  padding-block: var(--pad-y);
+
+  .section-title {
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+
+  .refs-marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 24px var(--pad-x);
+
+    &:hover .refs-track {
+      animation-play-state: paused;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: var(--pad-x);
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+    &::before {
+      left: 0;
+      background: linear-gradient(to right, #fafafa, transparent);
+    }
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, #fafafa, transparent);
+    }
+  }
+
+  /* ===== TRACK ===== */
+  .refs-track {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    will-change: transform;
+    animation: refs-marquee-scroll var(--marquee-duration) linear infinite;
+    padding-block: var(--hover-bleed);
+
+    gap: 0 !important;
+
+    padding-left: var(--gap);
+  }
+
+  .refs-track > .ref-card {
+    margin-left: var(--gap) !important;
+  }
+  .refs-track > article.ref-card:first-of-type {
+    margin-left: 0 !important; /* primera card no suma extra */
+  }
+
+  /* ===== CARD ===== */
+  .ref-card {
+    position: relative;
+    overflow: visible;
+    flex: 0 0 clamp(280px, 28vw, 380px);
+    display: grid;
+    grid-template-rows: auto auto;
+    min-width: 260px;
+
+    .ref-head,
+    .ref-box {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      transform-origin: center;
+      will-change: transform;
+    }
+
+    .ref-head {
+      line-height: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .reference-photo {
+      width: var(--avatar);
+      height: var(--avatar);
+      object-fit: cover;
+      display: block;
+      background: #FAFAFA;
+      border: var(--b) solid var(--stroke);
+    }
+
+    .ref-box {
+      position: relative;
+      z-index: 1;
+      border: var(--b) solid var(--stroke);
+      background: #FAFAFA;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: calc(-1 * var(--b)); 
+      margin-left: 0; 
+      overflow: visible;
+
+      .ref-content {
+        max-height: var(--max-card-text);
+        overflow: hidden;
+
+        p {
+          margin: 0;
+          font-family: inherit;
+          font-weight: 400;
+          font-size: 2rem;
+          line-height: 1.25;
+          color: #353535;
+
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          line-clamp: 12;         
+          -webkit-line-clamp: 12; 
+        }
+
+        strong {
+          display: block;
+          font-family: inherit;
+          font-weight: 700;
+          font-size: 1.5rem;
+          line-height: 1.1;
+          color: #353535;
+        }
+      }
+    }
+
+    &:hover {
+      z-index: 10;
+
+      .ref-head {
+        transform: rotate(3deg);
+      }
+      .ref-box {
+        transform: rotate(3deg);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+      }
+    }
+  }
+
+  @keyframes refs-marquee-scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 1100px) {
+    .ref-card {
+      flex-basis: clamp(280px, 42vw, 380px);
+    }
+  }
+
+  @media (max-width: 800px) {
+    --avatar: 84px;
+    --gap: 16px;
+    --marquee-duration: 35s;
+    --max-card-text: 420px;
+    --hover-bleed: 16px;
+
+    .ref-card .ref-box .ref-content {
+      p {
+        font-size: clamp(1.25rem, 4.8vw, 1.5rem);
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-clamp: 10;
+        -webkit-line-clamp: 10;
+      }
+
+      strong {
+        font-size: clamp(1rem, 3.8vw, 1.25rem);
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .refs-track {
+      animation: none;
+      transform: none;
+    }
+    .ref-head,
+    .ref-box {
+      transition: none;
+    }
+  }
+}

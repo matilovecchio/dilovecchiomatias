@@ -12,6 +12,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+
 </head>
 
 <body>
@@ -21,7 +23,6 @@
         <div class="header-container container-fluid px-3 px-md-4">
             <div class="logo">
                 <a href="index.html">
-                    <!-- Asegúrate de que este archivo exista en assets/img/ -->
                     <img src="assets/img/logo.png" alt="Logo" width="60" height="60" />
                 </a>
             </div>
@@ -230,131 +231,443 @@
         </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="container-fluid">
-        <h2 class="section-title">Projects</h2>
+<!-- Projects -->
+<section id="projects" class="container-fluid">
+  <h2 class="section-title">Projects</h2>
 
-        <div class="projects-list">
-            <!-- project row 1 -->
-            <div class="project">
-                <img src="assets/img/Project 01.png" alt="Project 1" class="project-image">
-                <div class="cell name">
-                    <h3>Project Name</h3>
-                </div>
-                <div class="cell date"><time datetime="2022-00-00">00/00/22</time></div>
-                <div class="cell desc">
-                    <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div class="cell action"><a class="project-link" href="#" target="_blank" rel="noopener"
-                        aria-label="Ver proyecto 1"></a></div>
-            </div>
+  <!-- Marquee continuo -->
+  <div class="projects-marquee" role="list" aria-label="Lista de proyectos">
+    <div class="projects-track">
 
-            <!-- project row 2 -->
-            <div class="project">
-                <img src="assets/img/Project 02.png" alt="Project 2" class="project-image">
-                <div class="cell name">
-                    <h3>Project Name</h3>
-                </div>
-                <div class="cell date"><time datetime="2022-00-00">00/00/22</time></div>
-                <div class="cell desc">
-                    <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div class="cell action"><a class="project-link" href="#" target="_blank" rel="noopener"
-                        aria-label="Ver proyecto 2"></a></div>
+      <!-- ====== LOTE A ====== -->
+      <article class="project-card" role="listitem">
+        <img class="project-media" src="assets/img/Project 01.png" alt="Project 1">
+        <div class="project-data-row">
+          <div class="meta-col">
+            <div class="name-box">
+              <div class="tilt">
+                <h3 class="name">Project Name</h3>
+              </div>
             </div>
-
-            <!-- project row 3 -->
-            <div class="project">
-                <img src="assets/img/Project 03.png" alt="Project 3" class="project-image">
-                <div class="cell name">
-                    <h3>Project Name</h3>
-                </div>
-                <div class="cell date"><time datetime="2022-00-00">00/00/22</time></div>
-                <div class="cell desc">
-                    <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div class="cell action"><a class="project-link" href="#" target="_blank" rel="noopener"
-                        aria-label="Ver proyecto 3"></a></div>
+            <time class="date-box" datetime="2025-00-00">
+              <div class="tilt">00/00/2025</div>
+            </time>
+          </div>
+          <div class="desc">
+            <div class="tilt">
+              <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.</p>
             </div>
-
-            <!-- project row 4 -->
-            <div class="project">
-                <img src="assets/img/Project 04.png" alt="Project 4" class="project-image">
-                <div class="cell name">
-                    <h3>Project Name</h3>
-                </div>
-                <div class="cell date"><time datetime="2022-00-00">00/00/22</time></div>
-                <div class="cell desc">
-                    <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div class="cell action"><a class="project-link" href="#" target="_blank" rel="noopener"
-                        aria-label="Ver proyecto 4"></a></div>
+          </div>
+          <a class="project-cta" href="#" target="_blank" rel="noopener" aria-label="Ver proyecto 1">
+            <div class="tilt">
+              <img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44">
             </div>
+          </a>
         </div>
-    </section>
+      </article>
 
-    <!-- References -->
-    <section id="references" class="container-fluid">
-        <h2 class="section-title">References</h2>
-
-        <div class="refs-scroller">
-            <!-- Card 1 -->
-            <article class="ref-card">
-                <div class="ref-head">
-                    <img class="reference-photo" src="assets/img/Avatar-image-1.png" alt="Photo of Referrer 1"
-                        loading="lazy" />
-                </div>
-                <div class="ref-box">
-                    <p>Desarrollo maquetas interactivas que ayudan a probar conceptos y flujos de
-                        trabajo antes de la implementación, lo que facilita la toma de decisiones
-                        y mejora la eficiencia.</p>
-                    <strong>Name - Puesto</strong>
-                </div>
-            </article>
-
-            <!-- Card 2 -->
-            <article class="ref-card">
-                <div class="ref-head">
-                    <img class="reference-photo" src="assets/img/Avatar-image-2.png" alt="Photo of Referrer 2"
-                        loading="lazy" />
-                </div>
-                <div class="ref-box">
-                    <p>Mi enfoque como diseñador UX/UI incluye la creación de maquetas interactivas
-                        que permiten validar ideas y flujos de trabajo antes de su implementación,
-                        lo que resulta en decisiones más acertadas y un aumento en la eficiencia.</p>
-                    <strong>Name - Puesto</strong>
-                </div>
-            </article>
-
-            <!-- Card 3 -->
-            <article class="ref-card">
-                <div class="ref-head">
-                    <img class="reference-photo" src="assets/img/Avatar-image-3.png" alt="Photo of Referrer 3"
-                        loading="lazy" />
-                </div>
-                <div class="ref-box">
-                    <p>Como diseñador UX/UI, creo prototipos interactivos que permiten explorar ideas
-                        y flujos de usuario antes de llevarlos a cabo, optimizando el proceso de diseño
-                        y ayudando a tomar decisiones más informadas.</p>
-                    <strong>Name - Puesto</strong>
-                </div>
-            </article>
-
-            <!-- Card 4 -->
-            <article class="ref-card">
-                <div class="ref-head">
-                    <img class="reference-photo" src="assets/img/Avatar-image-4.png" alt="Photo of Referrer 4"
-                        loading="lazy" />
-                </div>
-                <div class="ref-box">
-                    <p>En mi trabajo como diseñador UX/UI, desarrollo prototipos interactivos que
-                        facilitan la experimentación de conceptos y flujos de trabajo, mejorando así
-                        la toma de decisiones y la efectividad del proyecto.</p>
-                    <strong>Name - Puesto</strong>
-                </div>
-            </article>
+      <article class="project-card" role="listitem">
+        <img class="project-media" src="assets/img/Project 02.png" alt="Project 2">
+        <div class="project-data-row">
+          <div class="meta-col">
+            <div class="name-box">
+              <div class="tilt">
+                <h3 class="name">Project NameProject NameProject Name</h3>
+              </div>
+            </div>
+            <time class="date-box" datetime="2025-00-00">
+              <div class="tilt">00/00/2025</div>
+            </time>
+          </div>
+          <div class="desc">
+            <div class="tilt">
+              <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit. Qorem ipsum dolor sit amet Qorem ipsum dolor sit amet Qorem ipsum dolor sit ametSed porta leo vitae velit luctus consectetur adipiscing elit.</p>
+            </div>
+          </div>
+          <a class="project-cta" href="#" target="_blank" rel="noopener" aria-label="Ver proyecto 2">
+            <div class="tilt">
+              <img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44">
+            </div>
+          </a>
         </div>
-    </section>
+      </article>
+
+      <article class="project-card" role="listitem">
+        <img class="project-media" src="assets/img/Project 03.png" alt="Project 3">
+        <div class="project-data-row">
+          <div class="meta-col">
+            <div class="name-box">
+              <div class="tilt">
+                <h3 class="name">Project Name</h3>
+              </div>
+            </div>
+            <time class="date-box" datetime="2025-00-00">
+              <div class="tilt">00/00/2025</div>
+            </time>
+          </div>
+          <div class="desc">
+            <div class="tilt">
+              <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.</p>
+            </div>
+          </div>
+          <a class="project-cta" href="#" target="_blank" rel="noopener" aria-label="Ver proyecto 3">
+            <div class="tilt">
+              <img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44">
+            </div>
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card" role="listitem">
+        <img class="project-media" src="assets/img/Project 04.png" alt="Project 4">
+        <div class="project-data-row">
+          <div class="meta-col">
+            <div class="name-box">
+              <div class="tilt">
+                <h3 class="name">Project Name</h3>
+              </div>
+            </div>
+            <time class="date-box" datetime="2025-00-00">
+              <div class="tilt">00/00/2025</div>
+            </time>
+          </div>
+          <div class="desc">
+            <div class="tilt">
+              <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.</p>
+            </div>
+          </div>
+          <a class="project-cta" href="#" target="_blank" rel="noopener" aria-label="Ver proyecto 4">
+            <div class="tilt">
+              <img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44">
+            </div>
+          </a>
+        </div>
+      </article>
+
+      <!-- ====== LOTE B (duplicado para loop infinito) ====== -->
+      <article class="project-card" role="listitem" aria-hidden="true">
+        <img class="project-media" src="assets/img/Project 01.png" alt="">
+        <div class="project-data-row">
+          <div class="meta-col">
+            <div class="name-box">
+              <div class="tilt">
+                <h3 class="name">Project Name</h3>
+              </div>
+            </div>
+            <time class="date-box" datetime="2025-00-00">
+              <div class="tilt">00/00/2025</div>
+            </time>
+          </div>
+          <div class="desc">
+            <div class="tilt">
+              <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.</p>
+            </div>
+          </div>
+          <a class="project-cta" href="#" aria-label="Ver proyecto 1">
+            <div class="tilt">
+              <img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44">
+            </div>
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card" role="listitem" aria-hidden="true">
+        <img class="project-media" src="assets/img/Project 02.png" alt="">
+        <div class="project-data-row">
+          <div class="meta-col">
+            <div class="name-box">
+              <div class="tilt">
+                <h3 class="name">Project NameProject NameProject Name</h3>
+              </div>
+            </div>
+            <time class="date-box" datetime="2025-00-00">
+              <div class="tilt">00/00/2025</div>
+            </time>
+          </div>
+          <div class="desc">
+            <div class="tilt">
+              <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit. Qorem ipsum dolor sit amet Qorem ipsum dolor sit amet Qorem ipsum dolor sit ametSed porta leo vitae velit luctus consectetur adipiscing elit.</p>
+            </div>
+          </div>
+          <a class="project-cta" href="#" aria-label="Ver proyecto 2">
+            <div class="tilt">
+              <img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44">
+            </div>
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card" role="listitem" aria-hidden="true">
+        <img class="project-media" src="assets/img/Project 03.png" alt="">
+        <div class="project-data-row">
+          <div class="meta-col">
+            <div class="name-box">
+              <div class="tilt">
+                <h3 class="name">Project Name</h3>
+              </div>
+            </div>
+            <time class="date-box" datetime="2025-00-00">
+              <div class="tilt">00/00/2025</div>
+            </time>
+          </div>
+          <div class="desc">
+            <div class="tilt">
+              <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.</p>
+            </div>
+          </div>
+          <a class="project-cta" href="#" aria-label="Ver proyecto 3">
+            <div class="tilt">
+              <img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44">
+            </div>
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card" role="listitem" aria-hidden="true">
+        <img class="project-media" src="assets/img/Project 04.png" alt="">
+        <div class="project-data-row">
+          <div class="meta-col">
+            <div class="name-box">
+              <div class="tilt">
+                <h3 class="name">Project Name</h3>
+              </div>
+            </div>
+            <time class="date-box" datetime="2025-00-00">
+              <div class="tilt">00/00/2025</div>
+            </time>
+          </div>
+          <div class="desc">
+            <div class="tilt">
+              <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.</p>
+            </div>
+          </div>
+          <a class="project-cta" href="#" aria-label="Ver proyecto 4">
+            <div class="tilt">
+              <img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44">
+            </div>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- References -->
+<section id="references" class="container-fluid">
+  <h2 class="section-title">References</h2>
+
+  <div class="refs-marquee" aria-label="References auto-scroll">
+    <div class="refs-track">
+      <!-- ===== CARDS ===== -->
+      <article class="ref-card">
+        <div class="ref-head">
+          <img class="reference-photo" src="assets/img/Avatar-image-1.png" alt="Ref 1" loading="lazy">
+        </div>
+        <div class="ref-box">
+          <div class="ref-content">
+            <p>Su capacidad para transformar una idea inicial en un producto visualmente atractivo y funcional superó nuestras expectativas. Nos guió en cada etapa con claridad y compromiso.</p>
+            <strong>Nombre 1 — Puesto</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref-card">
+        <div class="ref-head">
+          <img class="reference-photo" src="assets/img/Avatar-image-2.png" alt="Ref 2" loading="lazy">
+        </div>
+        <div class="ref-box">
+          <div class="ref-content">
+            <p>La colaboración fue muy enriquecedora: comprendió rápidamente lo que necesitábamos, propuso soluciones innovadoras y cuidó cada detalle del diseño final. Sin dudas, lo recomendaría.</p>
+            <strong>Nombre 2 — Puesto</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref-card">
+        <div class="ref-head">
+          <img class="reference-photo" src="assets/img/Avatar-image-3.png" alt="Ref 3" loading="lazy">
+        </div>
+        <div class="ref-box">
+          <div class="ref-content">
+            <p>Trabajar juntos nos permitió lograr un resultado sólido y coherente. No solo aportó su conocimiento técnico, sino también una mirada estratégica que ayudó a mejorar la experiencia del usuario en nuestro servicio digital.</p>
+            <strong>Nombre 3 — Puesto</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref-card">
+        <div class="ref-head">
+          <img class="reference-photo" src="assets/img/Avatar-image-4.png" alt="Ref 4" loading="lazy">
+        </div>
+        <div class="ref-box">
+          <div class="ref-content">
+            <p>Me sorprendió la creatividad en la propuesta y cómo supo adaptarla a nuestras necesidades específicas.</p>
+            <strong>Nombre 4 — Puesto</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref-card">
+        <div class="ref-head">
+          <img class="reference-photo" src="assets/img/Avatar-image-1.png" alt="Ref 5" loading="lazy">
+        </div>
+        <div class="ref-box">
+          <div class="ref-content">
+            <p>Profesionalidad de principio a fin. La interacción fue sencilla y los resultados, de alto nivel.</p>
+            <strong>Nombre 5 — Puesto</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref-card">
+        <div class="ref-head">
+          <img class="reference-photo" src="assets/img/Avatar-image-2.png" alt="Ref 6" loading="lazy">
+        </div>
+        <div class="ref-box">
+          <div class="ref-content">
+            <p>El proyecto se entregó en tiempo y forma, con una comunicación clara durante todo el proceso.</p>
+            <strong>Nombre 6 — Puesto</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref-card">
+        <div class="ref-head">
+          <img class="reference-photo" src="assets/img/Avatar-image-3.png" alt="Ref 7" loading="lazy">
+        </div>
+        <div class="ref-box">
+          <div class="ref-content">
+            <p>Excelente trabajo, cumplió con lo esperado y más.</p>
+            <strong>Nombre 7 — Puesto</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref-card">
+        <div class="ref-head">
+          <img class="reference-photo" src="assets/img/Avatar-image-4.png" alt="Ref 8" loading="lazy">
+        </div>
+        <div class="ref-box">
+          <div class="ref-content">
+            <p>Gran predisposición y calidad en los detalles. Muy buena experiencia, volvería a contratar</p>
+            <strong>Nombre 8 — Puesto</strong>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== DUPLICADO de cards para loop continuo ===== -->
+      <article class="ref-card">
+        <div class="ref-head">
+          <img class="reference-photo" src="assets/img/Avatar-image-1.png" alt="Ref 1 duplicate" loading="lazy">
+        </div>
+        <div class="ref-box">
+          <div class="ref-content">
+            <p>Desarrollo maquetas interactivas que ayudan a probar conceptos y flujos de trabajo antes de la implementación.</p>
+            <strong>Nombre 1 — Puesto</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref-card">
+        <div class="ref-head">
+          <img class="reference-photo" src="assets/img/Avatar-image-2.png" alt="Ref 2 duplicate" loading="lazy">
+        </div>
+        <div class="ref-box">
+          <div class="ref-content">
+            <p>Creo maquetas interactivas para validar ideas y flujos de trabajo antes de su implementación.</p>
+            <strong>Nombre 2 — Puesto</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref-card">
+        <div class="ref-head">
+          <img class="reference-photo" src="assets/img/Avatar-image-3.png" alt="Ref 3 duplicate" loading="lazy">
+        </div>
+        <div class="ref-box">
+          <div class="ref-content">
+            <p>Prototipos interactivos para explorar ideas y optimizar decisiones en el proceso de diseño.</p>
+            <strong>Nombre 3 — Puesto</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref-card">
+        <div class="ref-head">
+          <img class="reference-photo" src="assets/img/Avatar-image-4.png" alt="Ref 4 duplicate" loading="lazy">
+        </div>
+        <div class="ref-box">
+          <div class="ref-content">
+            <p>Prototipos que facilitan la experimentación de conceptos y flujos de trabajo.</p>
+            <strong>Nombre 4 — Puesto</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref-card">
+        <div class="ref-head">
+          <img class="reference-photo" src="assets/img/Avatar-image-1.png" alt="Ref 5 duplicate" loading="lazy">
+        </div>
+        <div class="ref-box">
+          <div class="ref-content">
+            <p>Iteraciones rápidas para validar con usuarios antes del desarrollo.</p>
+            <strong>Nombre 5 — Puesto</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref-card">
+        <div class="ref-head">
+          <img class="reference-photo" src="assets/img/Avatar-image-2.png" alt="Ref 6 duplicate" loading="lazy">
+        </div>
+        <div class="ref-box">
+          <div class="ref-content">
+            <p>Diseño centrado en el usuario con foco en eficiencia y claridad.</p>
+            <strong>Nombre 6 — Puesto</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref-card">
+        <div class="ref-head">
+          <img class="reference-photo" src="assets/img/Avatar-image-3.png" alt="Ref 7 duplicate" loading="lazy">
+        </div>
+        <div class="ref-box">
+          <div class="ref-content">
+            <p>Prototipos navegables para validar flujos críticos.</p>
+            <strong>Nombre 7 — Puesto</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref-card">
+        <div class="ref-head">
+          <img class="reference-photo" src="assets/img/Avatar-image-4.png" alt="Ref 8 duplicate" loading="lazy">
+        </div>
+        <div class="ref-box">
+          <div class="ref-content">
+            <p>Investigación y pruebas de usabilidad para decisiones informadas.</p>
+            <strong>Nombre 8 — Puesto</strong>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
 
     <!-- Contact -->
     <section id="contact" class="container-fluid">

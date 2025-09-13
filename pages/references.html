@@ -1,107 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>References</title>
+    <link rel="stylesheet" href="../assets/css/style.css?v=2" />
 </head>
 
-            <!-- Header -->
-<header>
-    <div class="header-container container-fluid px-3 px-md-4">
-        <div class="logo">
-            <a href="../index.html">
-                <img src="/assets/img/logo.png" alt="Logo" width="60" height="60" />
-            </a>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container container-fluid px-3 px-md-4">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/img/logo.png" alt="Logo" width="60" height="60" />
+                </a>
+            </div>
+            <nav aria-label="Main navigation">
+                <ul class="menu">
+                    <li><a href="../index.html" class="btn btn-secondary">Home</a></li>
+                    <li><a href="about.html" class="btn btn-secondary">About</a></li>
+                    <li><a href="services.html" class="btn btn-secondary">Services</a></li>
+                    <li><a href="projects.html" class="btn btn-secondary">Projects</a></li>
+                    <li><a href="contact.html" class="btn btn-secondary">Contact</a></li>
+                    <li><a href="references.html" class="btn btn-secondary active">References</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav aria-label="Main navigation">
-            <ul class="menu">
-                <li><a href="../index.html" class="btn btn-secondary">Home</a></li>
-                <li><a href="about.html" class="btn btn-secondary">About</a></li>
-                <li><a href="services.html" class="btn btn-secondary">Services</a></li>
-                <li><a href="projects.html" class="btn btn-secondary">Projects</a></li>
-                <li><a href="contact.html" class="btn btn-secondary">Contact</a></li>
-                <li><a href="references.html" class="btn btn-secondary active">References</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
+    </header>
 
     <!-- References -->
     <section id="references" class="container-fluid">
         <h2 class="section-title">References</h2>
 
-        <div class="refs-scroller">
-            <!-- Card 1 -->
-            <article class="ref-card">
-                <div class="ref-head">
-                    <img class="reference-photo" src="../assets/img/Avatar-image-1.png" alt="Photo of Referrer 1"
-                        loading="lazy" />
-                </div>
-                <div class="ref-box">
-                    <p>
-                        Desarrollo maquetas interactivas que ayudan a probar conceptos y flujos de
-                        trabajo antes de la implementación, lo que facilita la toma de decisiones
-                        y mejora la eficiencia.
-                    </p>
-                    <strong>Name - Puesto</strong>
-                </div>
-            </article>
+        <div class="refs-marquee" role="list" aria-label="Lista de referencias">
+            <div class="refs-track">
 
-            <!-- Card 2 -->
-            <article class="ref-card">
-                <div class="ref-head">
-                    <img class="reference-photo" src="../assets/img/Avatar-image-2.png" alt="Photo of Referrer 2"
-                        loading="lazy" />
-                </div>
-                <div class="ref-box">
-                    <p>
-                        Mi enfoque como diseñador UX/UI incluye la creación de maquetas interactivas
-                        que permiten validar ideas y flujos de trabajo antes de su implementación,
-                        lo que resulta en decisiones más acertadas y un aumento en la eficiencia.
-                    </p>
-                    <strong>Name - Puesto</strong>
-                </div>
-            </article>
+                <span class="track-spacer" aria-hidden="true"></span>
 
-            <!-- Card 3 -->
-            <article class="ref-card">
-                <div class="ref-head">
-                    <img class="reference-photo" src="../assets/img/Avatar-image-3.png" alt="Photo of Referrer 3"
-                        loading="lazy" />
-                </div>
-                <div class="ref-box">
-                    <p>
-                        Como diseñador UX/UI, creo prototipos interactivos que permiten explorar ideas
-                        y flujos de usuario antes de llevarlos a cabo, optimizando el proceso de diseño
-                        y ayudando a tomar decisiones más informadas.
-                    </p>
-                    <strong>Name - Puesto</strong>
-                </div>
-            </article>
+                <!-- ====== LOTE A ====== -->
+                <article class="ref-card" role="listitem">
+                    <div class="ref-head">
+                        <img class="reference-photo" src="../assets/img/Avatar-image-1.png" alt="Photo of Referrer 1"
+                            loading="lazy" />
+                    </div>
+                    <div class="ref-box">
+                        <div class="ref-content">
+                            <p>Su capacidad para transformar una idea inicial en un producto visualmente atractivo y funcional superó nuestras expectativas. Nos guió en cada etapa con claridad y compromiso.</p>
+                            <strong>Name — Puesto</strong>
+                        </div>
+                    </div>
+                </article>
 
-            <!-- Card 4 -->
-            <article class="ref-card">
-                <div class="ref-head">
-                    <img class="reference-photo" src="../assets/img/Avatar-image-4.png" alt="Photo of Referrer 4"
-                        loading="lazy" />
-                </div>
-                <div class="ref-box">
-                    <p>
-                        En mi trabajo como diseñador UX/UI, desarrollo prototipos interactivos que
-                        facilitan la experimentación de conceptos y flujos de trabajo, mejorando así
-                        la toma de decisiones y la efectividad del proyecto.
-                    </p>
-                    <strong>Name - Puesto</strong>
-                </div>
-            </article>
+                <article class="ref-card" role="listitem">
+                    <div class="ref-head">
+                        <img class="reference-photo" src="../assets/img/Avatar-image-2.png" alt="Photo of Referrer 2"
+                            loading="lazy" />
+                    </div>
+                    <div class="ref-box">
+                        <div class="ref-content">
+                            <p>La colaboración fue muy enriquecedora: comprendió rápidamente lo que necesitábamos, propuso soluciones innovadoras y cuidó cada detalle del diseño final. Sin dudas, lo recomendaría</p>
+                            <strong>Name — Puesto</strong>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="ref-card" role="listitem">
+                    <div class="ref-head">
+                        <img class="reference-photo" src="../assets/img/Avatar-image-3.png" alt="Photo of Referrer 3"
+                            loading="lazy" />
+                    </div>
+                    <div class="ref-box">
+                        <div class="ref-content">
+                            <p>Trabajar juntos nos permitió lograr un resultado sólido y coherente. No solo aportó su conocimiento técnico, sino también una mirada estratégica que ayudó a mejorar la experiencia del usuario en nuestro servicio digital.</p>
+                            <strong>Name — Puesto</strong>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="ref-card" role="listitem">
+                    <div class="ref-head">
+                        <img class="reference-photo" src="../assets/img/Avatar-image-4.png" alt="Photo of Referrer 4"
+                            loading="lazy" />
+                    </div>
+                    <div class="ref-box">
+                        <div class="ref-content">
+                            <p>En mi trabajo como diseñador UX/UI, desarrollo prototipos interactivos que facilitan la
+                                experimentación de conceptos y flujos de trabajo, mejorando así la toma de decisiones y
+                                la efectividad del proyecto.</p>
+                            <strong>Name — Puesto</strong>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ====== LOTE B (duplicado para loop infinito) ====== -->
+                <article class="ref-card" role="listitem" aria-hidden="true">
+                    <div class="ref-head">
+                        <img class="reference-photo" src="../assets/img/Avatar-image-1.png" alt="" />
+                    </div>
+                    <div class="ref-box">
+                        <div class="ref-content">
+                            <p>Desarrollo maquetas interactivas que ayudan a probar conceptos y flujos de trabajo antes
+                                de la implementación, lo que facilita la toma de decisiones y mejora la eficiencia.</p>
+                            <strong>Name — Puesto</strong>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="ref-card" role="listitem" aria-hidden="true">
+                    <div class="ref-head">
+                        <img class="reference-photo" src="../assets/img/Avatar-image-2.png" alt="" />
+                    </div>
+                    <div class="ref-box">
+                        <div class="ref-content">
+                            <p>Mi enfoque como diseñador UX/UI incluye la creación de maquetas interactivas que permiten
+                                validar ideas y flujos de trabajo antes de su implementación, lo que resulta en
+                                decisiones más acertadas y un aumento en la eficiencia.</p>
+                            <strong>Name — Puesto</strong>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="ref-card" role="listitem" aria-hidden="true">
+                    <div class="ref-head">
+                        <img class="reference-photo" src="../assets/img/Avatar-image-3.png" alt="" />
+                    </div>
+                    <div class="ref-box">
+                        <div class="ref-content">
+                            <p>Como diseñador UX/UI, creo prototipos interactivos que permiten explorar ideas y flujos
+                                de usuario antes de llevarlos a cabo, optimizando el proceso de diseño y ayudando a
+                                tomar decisiones más informadas.</p>
+                            <strong>Name — Puesto</strong>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="ref-card" role="listitem" aria-hidden="true">
+                    <div class="ref-head">
+                        <img class="reference-photo" src="../assets/img/Avatar-image-4.png" alt="" />
+                    </div>
+                    <div class="ref-box">
+                        <div class="ref-content">
+                            <p>En mi trabajo como diseñador UX/UI, desarrollo prototipos interactivos que facilitan la
+                                experimentación de conceptos y flujos de trabajo, mejorando así la toma de decisiones y
+                                la efectividad del proyecto.</p>
+                            <strong>Name — Puesto</strong>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
         </div>
     </section>
 
-    
-    <!-- Footer  -->
+    <!-- Footer -->
     <footer class="container-fluid">
         <div class="social-icons" aria-label="Social links">
             <a href="https://wa.me/5493512630020" target="_blank" rel="noopener">
@@ -115,14 +168,14 @@
             </a>
         </div>
 
-        <p class="footer-cta">Hey, what’s holding you back from dropping me a text? :) </p>
+        <p class="footer-cta">Hey, what’s holding you back from dropping me a text? :)</p>
         <p class="copyright">© 2025 copyright all right reserved</p>
     </footer>
 
-    <!-- JS de Bootstrap -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
 </body>
+
 </html>

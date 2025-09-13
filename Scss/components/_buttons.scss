@@ -1,0 +1,94 @@
+/* Botones generales */
+.btn {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .3px;
+    border: 4px solid #353535;
+    background: #353535;
+    color: #FAFAFA;
+    padding: 8px 20px;
+    min-height: 44px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background .25s, color .25s, border-color .25s;
+
+    &:hover,
+    &:focus-visible {
+        background: #7FFE93;
+        color: #353535;
+        border-color: #353535;
+        outline: none;
+    }
+}
+
+/* Hero buttons */
+.button-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-family: "Public Sans", sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1;
+        min-height: 44px;
+        padding: 8px 20px;
+        border-radius: 0;
+        transition: background .25s, color .25s, border-color .25s;
+
+        &.btn-secondary {
+            background: #FAFAFA !important;
+            color: #353535 !important;
+            border: 4px solid #353535 !important;
+
+            &:hover {
+                background: #7FFE93 !important;
+                color: #353535 !important;
+                border-color: #353535 !important;
+            }
+        }
+
+        &.btn-primary.hero-primary {
+            background: #353535 !important;
+            color: #FAFAFA !important;
+            border: 4px solid #FAFAFA !important;
+
+            &:hover {
+                background: #7FFE93 !important;
+                color: #4618AF !important;
+                border-color: #7FFE93 !important;
+            }
+        }
+    }
+}
+
+/* Ajuste bootstrap */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-outline-primary,
+.btn-outline-secondary {
+    border-radius: 0 !important;
+}
+
+/* Contact form button */
+.contact-form {
+    .btn {
+        display: block;
+        width: calc(100% + var(--pl) + var(--bw));
+        margin-left: calc(-1 * (var(--pl) + var(--bw)));
+
+        @media (max-width: 900px) {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
