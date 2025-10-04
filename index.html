@@ -1,752 +1,519 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Matías Lovecchio Skamelka – Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  <!-- SEO básico -->
+  <title>Matías Lovecchio Skamelka — UX/UI & Industrial Designer</title>
+  <meta name="description" content="Portafolio de Matías Lovecchio Skamelka. Diseño UX/UI, prototipos, visual design y diseño industrial. Experiencia en logística, dashboards y productos digitales." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://dimatiaslovecchio.xo.je/" />
+
+  <!-- Open Graph (social preview) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="Matías Lovecchio Skamelka — Portfolio" />
+  <meta property="og:title" content="Matías Lovecchio Skamelka — UX/UI & Industrial Designer" />
+  <meta property="og:description" content="Portfolio de UX/UI, prototipos y diseño visual." />
+  <meta property="og:url" content="https://dimatiaslovecchio.xo.je/" />
+  <meta property="og:image" content="https://dimatiaslovecchio.xo.je/assets/img/og-image.png" />
+  <meta property="og:image:alt" content="Vista previa del portfolio de Matías Lovecchio Skamelka" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (PNG) -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+  <!-- Accesibilidad: salto a contenido -->
+  <a class="visually-hidden-focusable" href="#home">Saltar al contenido</a>
 
-    <!-- Header -->
-    <header>
-        <div class="header-container container-fluid px-3 px-md-4">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/img/logo.png" alt="Logo" width="60" height="60" />
-                </a>
-            </div>
-            <nav aria-label="Main navigation">
-                <ul class="menu">
-                    <li><a href="index.html" class="btn btn-secondary active">Home</a></li>
-                    <li><a href="pages/about.html" class="btn btn-secondary">About</a></li>
-                    <li><a href="pages/services.html" class="btn btn-secondary">Services</a></li>
-                    <li><a href="pages/projects.html" class="btn btn-secondary">Projects</a></li>
-                    <li><a href="pages/contact.html" class="btn btn-secondary">Contact</a></li>
-                    <li><a href="pages/references.html" class="btn btn-secondary">References</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Home -->
-    <section id="home" class="container-fluid p-0">
-        <div class="hero">
-            <!-- Contenedor superior bg + foto en esquina inferior derecha -->
-            <div class="hero-banner">
-                <img class="hero-photo" src="assets/img/Photo.png" alt="Foto de perfil" width="223" height="220">
-            </div>
-
-            <!-- Contenido -->
-            <div class="hero-inner">
-                <div class="hero-text">
-                    <h1 class="hero-name" aria-label="Matías Emanuel Lovecchio Skamelka">
-                        <span>MATÍAS EMANUEL</span>
-                        <span>LOVECCHIO SKAMELKA</span>
-                    </h1>
-                    <h2 class="thin">A designer who can solve your projects</h2>
-                </div>
-
-                <!-- Contenedor de botones -->
-                <div class="button-group">
-                    <a href="pages/projects.html" class="btn btn-primary hero-primary">Check my work</a>
-                    <a href="pages/contact.html" class="btn btn-secondary">Contact me</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="about container-fluid">
-        <!-- 1) Pic + about container -->
-        <div class="about-hero">
-            <img src="assets/img/About image 05.png" alt="Imagen 1 about" class="about-hero-img" />
-
-            <div class="about-hero-copy">
-                <h2 class="section-title">About</h2>
-
-                <div class="about-paragraph">
-                    <p>
-                        Hi there! I'm Mati, a passionate software developer with a love for creating innovative
-                        solutions. When I'm not coding, you can find me hiking in the mountains or experimenting
-                        with new recipes in the kitchen. I thrive on collaboration and enjoy sharing ideas with others.
-                    </p>
-                </div>
-
-                <a href="#" class="btn">CHECK MY RESUME</a>
-            </div>
-        </div>
-
-        <!-- 2) Photo + Personal data -->
-        <div class="about-personal">
-            <img src="assets/img/About image 04.png" alt="Imagen 2 sobre mí" class="about-personal-img" />
-
-            <div class="data-container">
-                <div class="data-row">
-                    <div class="data-label">Age</div>
-                    <div class="data-value">30 yo</div>
-                </div>
-
-                <div class="data-row">
-                    <div class="data-label">Location</div>
-                    <div class="data-value">Córdoba, Argentina</div>
-                </div>
-
-                <div class="data-row">
-                    <div class="data-label">Phone</div>
-                    <div class="data-value"><a href="https://wa.me/5493512630020">+543512630020</a></div>
-                </div>
-
-                <div class="data-row">
-                    <div class="data-label">Email</div>
-                    <div class="data-value">
-                        <a href="mailto:matias.lovecchio@hotmail.com">matias.lovecchio@gmail.com</a>
-                    </div>
-                </div>
-
-                <div class="data-row">
-                    <div class="data-label">Social</div>
-                    <div class="data-value">
-                        <a href="https://www.linkedin.com/in/lovecchiomatias/">Linkedin</a> |
-                        <a href="https://www.behance.net/matiaslovecchio">Behance</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3) Images container -->
-        <div class="about-gallery">
-            <img src="assets/img/About image 03.png" alt="Imagen 3" class="about-img-small" />
-            <img src="assets/img/About image 02.png" alt="Imagen 4" class="about-img-small" />
-            <img src="assets/img/About image 01.png" alt="Imagen 5" class="about-img-small" />
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="container-fluid">
-        <!-- 1) Services  -->
-        <div class="svc-block">
-            <h2 class="section-title">Servicios</h2>
-
-            <div class="services-container">
-                <!-- Card 1 -->
-                <div class="service-card">
-                    <div class="service-title">
-                        <img src="assets/img/services 1.png" alt="Icono diseño centrado en el usuario"
-                            class="service-icon" />
-                        <h3>Diseño centrado en el usuario</h3>
-                    </div>
-                    <p>
-                        Cada proyecto parte de la empatía con el usuario para crear interfaces intuitivas,
-                        accesibles y fáciles de navegar.
-                    </p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="service-card">
-                    <div class="service-title">
-                        <img src="assets/img/service 2.png" alt="Icono Prototipado" class="service-icon" />
-                        <h3>Prototipos interactivos</h3>
-                    </div>
-                    <p>
-                        Realizo prototipos funcionales que permiten validar ideas y flujos antes del desarrollo,
-                        ahorrando tiempo y optimizando resultados.
-                    </p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="service-card">
-                    <div class="service-title">
-                        <img src="assets/img/service 3.png" alt="Icono Diseño visual" class="service-icon" />
-                        <h3>Diseño visual</h3>
-                    </div>
-                    <p>
-                        Cuido la estética cuidando cada detalle, desde la tipografía hasta la paleta de colores,
-                        para generar una identidad visual única y memorable.
-                    </p>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="service-card">
-                    <div class="service-title">
-                        <img src="assets/img/service 4.png" alt="Icono Asesoramiento" class="service-icon" />
-                        <h3>Asesoramiento</h3>
-                    </div>
-                    <p>
-                        Ofrezco asesoría personalizada para mejorar la experiencia y el diseño de tus productos
-                        digitales, optimizando usabilidad, accesibilidad y resultados según tus objetivos.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 2) Hard Skills -->
-        <div class="svc-block">
-            <h2 class="section-title">Hard Skills</h2>
-
-            <div class="skills-box">
-                <div class="chips-row row1">
-                    <span class="tag">UI Design</span>
-                    <span class="tag">UX Design</span>
-                    <span class="tag">Responsive</span>
-                    <span class="tag">Prototyping</span>
-                    <span class="tag">Usability</span>
-                    <span class="tag">Design Systems</span>
-                    <span class="tag">HTML/CSS</span>
-                </div>
-                <div class="chips-row row2">
-                    <span class="tag">3D Design</span>
-                    <span class="tag">Design Thinking</span>
-                    <span class="tag">Process Documentation</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3) Soft Skills -->
-        <div class="svc-block svc-soft">
-            <div class="skills-box">
-                <div class="chips-row row1">
-                    <span class="tag">Critical Analysis</span>
-                    <span class="tag">Effective Communication</span>
-                    <span class="tag">User Empathy</span>
-                    <span class="tag">Collaborative Work</span>
-                    <span class="tag">Multitasking</span>
-                </div>
-                <div class="chips-row row2">
-                    <span class="tag">Attention to Detail</span>
-                    <span class="tag">Leadership</span>
-                </div>
-            </div>
-            <h2 class="section-title">Soft Skills</h2>
-        </div>
-    </section>
-
-<!-- Projects -->
-<section id="projects" class="container-fluid">
-  <h2 class="section-title">Projects</h2>
-
-  <!-- Marquee continuo -->
-  <div class="projects-marquee" role="list" aria-label="Lista de proyectos">
-    <div class="projects-track">
-
-      <!-- ====== LOTE A ====== -->
-      <article class="project-card" role="listitem">
-        <img class="project-media" src="assets/img/Project 01.png" alt="Project 1">
-        <div class="project-data-row">
-          <div class="meta-col">
-            <div class="name-box">
-              <div class="tilt">
-                <h3 class="name">Project Name</h3>
-              </div>
-            </div>
-            <time class="date-box" datetime="2025-00-00">
-              <div class="tilt">00/00/2025</div>
-            </time>
-          </div>
-          <div class="desc">
-            <div class="tilt">
-              <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.</p>
-            </div>
-          </div>
-          <a class="project-cta" href="#" target="_blank" rel="noopener" aria-label="Ver proyecto 1">
-            <div class="tilt">
-              <img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44">
-            </div>
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card" role="listitem">
-        <img class="project-media" src="assets/img/Project 02.png" alt="Project 2">
-        <div class="project-data-row">
-          <div class="meta-col">
-            <div class="name-box">
-              <div class="tilt">
-                <h3 class="name">Project NameProject NameProject Name</h3>
-              </div>
-            </div>
-            <time class="date-box" datetime="2025-00-00">
-              <div class="tilt">00/00/2025</div>
-            </time>
-          </div>
-          <div class="desc">
-            <div class="tilt">
-              <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit. Qorem ipsum dolor sit amet Qorem ipsum dolor sit amet Qorem ipsum dolor sit ametSed porta leo vitae velit luctus consectetur adipiscing elit.</p>
-            </div>
-          </div>
-          <a class="project-cta" href="#" target="_blank" rel="noopener" aria-label="Ver proyecto 2">
-            <div class="tilt">
-              <img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44">
-            </div>
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card" role="listitem">
-        <img class="project-media" src="assets/img/Project 03.png" alt="Project 3">
-        <div class="project-data-row">
-          <div class="meta-col">
-            <div class="name-box">
-              <div class="tilt">
-                <h3 class="name">Project Name</h3>
-              </div>
-            </div>
-            <time class="date-box" datetime="2025-00-00">
-              <div class="tilt">00/00/2025</div>
-            </time>
-          </div>
-          <div class="desc">
-            <div class="tilt">
-              <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.</p>
-            </div>
-          </div>
-          <a class="project-cta" href="#" target="_blank" rel="noopener" aria-label="Ver proyecto 3">
-            <div class="tilt">
-              <img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44">
-            </div>
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card" role="listitem">
-        <img class="project-media" src="assets/img/Project 04.png" alt="Project 4">
-        <div class="project-data-row">
-          <div class="meta-col">
-            <div class="name-box">
-              <div class="tilt">
-                <h3 class="name">Project Name</h3>
-              </div>
-            </div>
-            <time class="date-box" datetime="2025-00-00">
-              <div class="tilt">00/00/2025</div>
-            </time>
-          </div>
-          <div class="desc">
-            <div class="tilt">
-              <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.</p>
-            </div>
-          </div>
-          <a class="project-cta" href="#" target="_blank" rel="noopener" aria-label="Ver proyecto 4">
-            <div class="tilt">
-              <img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44">
-            </div>
-          </a>
-        </div>
-      </article>
-
-      <!-- ====== LOTE B (duplicado para loop infinito) ====== -->
-      <article class="project-card" role="listitem" aria-hidden="true">
-        <img class="project-media" src="assets/img/Project 01.png" alt="">
-        <div class="project-data-row">
-          <div class="meta-col">
-            <div class="name-box">
-              <div class="tilt">
-                <h3 class="name">Project Name</h3>
-              </div>
-            </div>
-            <time class="date-box" datetime="2025-00-00">
-              <div class="tilt">00/00/2025</div>
-            </time>
-          </div>
-          <div class="desc">
-            <div class="tilt">
-              <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.</p>
-            </div>
-          </div>
-          <a class="project-cta" href="#" aria-label="Ver proyecto 1">
-            <div class="tilt">
-              <img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44">
-            </div>
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card" role="listitem" aria-hidden="true">
-        <img class="project-media" src="assets/img/Project 02.png" alt="">
-        <div class="project-data-row">
-          <div class="meta-col">
-            <div class="name-box">
-              <div class="tilt">
-                <h3 class="name">Project NameProject NameProject Name</h3>
-              </div>
-            </div>
-            <time class="date-box" datetime="2025-00-00">
-              <div class="tilt">00/00/2025</div>
-            </time>
-          </div>
-          <div class="desc">
-            <div class="tilt">
-              <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit. Qorem ipsum dolor sit amet Qorem ipsum dolor sit amet Qorem ipsum dolor sit ametSed porta leo vitae velit luctus consectetur adipiscing elit.</p>
-            </div>
-          </div>
-          <a class="project-cta" href="#" aria-label="Ver proyecto 2">
-            <div class="tilt">
-              <img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44">
-            </div>
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card" role="listitem" aria-hidden="true">
-        <img class="project-media" src="assets/img/Project 03.png" alt="">
-        <div class="project-data-row">
-          <div class="meta-col">
-            <div class="name-box">
-              <div class="tilt">
-                <h3 class="name">Project Name</h3>
-              </div>
-            </div>
-            <time class="date-box" datetime="2025-00-00">
-              <div class="tilt">00/00/2025</div>
-            </time>
-          </div>
-          <div class="desc">
-            <div class="tilt">
-              <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.</p>
-            </div>
-          </div>
-          <a class="project-cta" href="#" aria-label="Ver proyecto 3">
-            <div class="tilt">
-              <img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44">
-            </div>
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card" role="listitem" aria-hidden="true">
-        <img class="project-media" src="assets/img/Project 04.png" alt="">
-        <div class="project-data-row">
-          <div class="meta-col">
-            <div class="name-box">
-              <div class="tilt">
-                <h3 class="name">Project Name</h3>
-              </div>
-            </div>
-            <time class="date-box" datetime="2025-00-00">
-              <div class="tilt">00/00/2025</div>
-            </time>
-          </div>
-          <div class="desc">
-            <div class="tilt">
-              <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus. Qorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta leo vitae velit luctus.</p>
-            </div>
-          </div>
-          <a class="project-cta" href="#" aria-label="Ver proyecto 4">
-            <div class="tilt">
-              <img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44">
-            </div>
-          </a>
-        </div>
-      </article>
-
+  <!-- Header -->
+  <header role="banner">
+    <div class="header-container container-fluid px-3 px-md-4">
+      <div class="logo">
+        <a href="index.html" aria-label="Ir al inicio">
+          <img src="assets/img/logo.png" alt="Logo de Matías Lovecchio Skamelka" width="60" height="60" decoding="async" />
+        </a>
+      </div>
+      <nav aria-label="Navegación principal">
+        <ul class="menu">
+          <li><a href="index.html" class="btn btn-secondary active" aria-current="page">Home</a></li>
+          <li><a href="pages/about.html" class="btn btn-secondary">About</a></li>
+          <li><a href="pages/services.html" class="btn btn-secondary">Services</a></li>
+          <li><a href="pages/projects.html" class="btn btn-secondary">Projects</a></li>
+          <li><a href="pages/contact.html" class="btn btn-secondary">Contact</a></li>
+          <li><a href="pages/references.html" class="btn btn-secondary">References</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
+  <!-- Home -->
+  <section id="home" class="container-fluid p-0">
+    <div class="hero">
+      <div class="hero-banner">
+        <img class="hero-photo" src="assets/img/Photo.png" alt="Foto de perfil de Matías Lovecchio Skamelka" width="223" height="220" fetchpriority="high" decoding="async">
+      </div>
 
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1 class="hero-name" aria-label="Matías Emanuel Lovecchio Skamelka">
+            <span>MATÍAS EMANUEL</span>
+            <span>LOVECCHIO SKAMELKA</span>
+          </h1>
+          <h2 class="thin">A designer who can solve your projects</h2>
+        </div>
 
+        <div class="button-group">
+          <a href="pages/projects.html" class="btn btn-primary hero-primary">Check my work</a>
+          <a href="pages/contact.html" class="btn btn-secondary">Contact me</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- About -->
+  <section id="about" class="about container-fluid">
+    <div class="about-hero">
+      <img src="assets/img/About image 05.png" alt="Ilustración botánica en escala de grises" class="about-hero-img" loading="lazy" decoding="async" />
+      <div class="about-hero-copy">
+        <h2 class="section-title">About</h2>
+        <div class="about-paragraph">
+          <p>✨ ¡Hola! Soy Mati, diseñador industrial especializado en UX/UI.</p>
+          <p>Me apasiona crear experiencias digitales atractivas y funcionales, buscando el equilibrio entre una geometría limpia, la interacción intuitiva y el valor real para el usuario.</p>
+          <p>Hoy formo parte de un equipo de desarrollo de software orientado a la optimización logística, y también soy docente universitario en Morfología, donde disfruto compartir y aprender junto a mis alumnos.</p>
+          <p>Combino mi experiencia en diseño industrial con mi enfoque en UX/UI para transformar ideas en soluciones claras, útiles e impactantes.</p>
+        </div>
+        <a href="#" class="btn">CHECK MY RESUME</a>
+      </div>
+    </div>
 
-<!-- References -->
-<section id="references" class="container-fluid">
-  <h2 class="section-title">References</h2>
+    <div class="about-personal">
+      <img src="assets/img/About image 04.png" alt="Detalle botánico en grafito" class="about-personal-img" loading="lazy" decoding="async" />
+      <div class="data-container">
+        <div class="data-row">
+          <div class="data-label">Age</div>
+          <div class="data-value">30 yo</div>
+        </div>
+        <div class="data-row">
+          <div class="data-label">Location</div>
+          <div class="data-value">Córdoba, Argentina</div>
+        </div>
+        <div class="data-row">
+          <div class="data-label">Phone</div>
+          <div class="data-value"><a href="https://wa.me/5493512630020" rel="noopener noreferrer">+54 9 351 263 0020</a></div>
+        </div>
+        <div class="data-row">
+          <div class="data-label">Email</div>
+          <div class="data-value"><a href="mailto:matias.lovecchio@gmail.com">matias.lovecchio@gmail.com</a></div>
+        </div>
+        <div class="data-row">
+          <div class="data-label">Social</div>
+          <div class="data-value">
+            <a href="https://www.linkedin.com/in/lovecchiomatias/" rel="noopener noreferrer">LinkedIn</a> |
+            <a href="https://www.behance.net/matiaslovecchio" rel="noopener noreferrer">Behance</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div class="refs-marquee" aria-label="References auto-scroll">
-    <div class="refs-track">
-      <!-- ===== CARDS ===== -->
+    <div class="about-gallery">
+      <img src="assets/img/About image 03.png" alt="Ilustración botánica 1" class="about-img-small" loading="lazy" decoding="async" />
+      <img src="assets/img/About image 02.png" alt="Ilustración botánica 2" class="about-img-small" loading="lazy" decoding="async" />
+      <img src="assets/img/About image 01.png" alt="Ilustración botánica 3" class="about-img-small" loading="lazy" decoding="async" />
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="container-fluid">
+    <div class="nav-spacer" aria-hidden="true"></div>
+
+    <div class="svc-block">
+      <div class="section-head">
+        <h2 class="section-title">Services</h2>
+        <div class="desc-rail">
+          <p class="section-desc">
+            I design clear and attractive interfaces focused on the user.
+            I turn ideas into intuitive digital experiences.
+            I combine industrial design and UX/UI to create functional and innovative solutions.
+          </p>
+        </div>
+      </div>
+
+      <div class="services-container">
+        <div class="service-card">
+          <div class="service-title">
+            <img src="assets/img/services 1.png" alt="Icono de diseño centrado en el usuario" class="service-icon" loading="lazy" decoding="async" />
+            <h3>User Experience</h3>
+          </div>
+          <p>Each project begins with empathy for the user to create intuitive, accessible, and easy-to-navigate interfaces.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-title">
+            <img src="assets/img/service 2.png" alt="Icono de prototipado" class="service-icon" loading="lazy" decoding="async" />
+            <h3>Interactive Prototypes</h3>
+          </div>
+        <p>I create functional prototypes that allow ideas and flows to be validated before development, saving time and optimizing results.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-title">
+            <img src="assets/img/service 3.png" alt="Icono de diseño visual" class="service-icon" loading="lazy" decoding="async" />
+            <h3>Visual Design</h3>
+          </div>
+          <p>I take care of aesthetics by paying attention to every detail, from typography to color palettes, to create a unique and memorable visual identity.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-title">
+            <img src="assets/img/service 4.png" alt="Icono de consultoría" class="service-icon" loading="lazy" decoding="async" />
+            <h3>Consulting</h3>
+          </div>
+          <p>I offer personalized consulting to improve the experience and design of your digital products, optimizing usability, accessibility, and results according to your goals.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-block">
+      <h2 class="section-title">Hard Skills</h2>
+      <div class="skills-box">
+        <div class="chips-row row1">
+          <span class="tag">UI Design</span><span class="tag">UX Design</span><span class="tag">Responsive</span>
+          <span class="tag">Prototyping</span><span class="tag">Usability</span><span class="tag">Design Systems</span>
+          <span class="tag">HTML/CSS</span>
+        </div>
+        <div class="chips-row row2">
+          <span class="tag">3D Design</span><span class="tag">Design Thinking</span>
+          <span class="tag">Process Documentation</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-block svc-soft">
+      <div class="skills-box">
+        <div class="chips-row row1">
+          <span class="tag">Critical Analysis</span><span class="tag">Effective Communication</span>
+          <span class="tag">User Empathy</span><span class="tag">Collaborative Work</span><span class="tag">Multitasking</span>
+        </div>
+        <div class="chips-row row2">
+          <span class="tag">Attention to Detail</span><span class="tag">Leadership</span>
+        </div>
+      </div>
+      <h2 class="section-title">Soft Skills</h2>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="container-fluid">
+    <div class="section-head projects-head">
+      <h2 class="section-title">Projects</h2>
+      <div class="desc-rail">
+        <p class="section-desc">
+          Most of these works are self-taught explorations developed over the years. They reflect my growth as a designer and the evolution of my process, showcasing how curiosity and constant practice have shaped my skills and approach to design.
+        </p>
+      </div>
+    </div>
+
+    <div class="projects-marquee" role="list" aria-label="Lista de proyectos">
+      <div class="projects-track">
+
+        <!-- Lote A -->
+        <article class="project-card" role="listitem">
+          <img class="project-media" src="assets/img/Project 01.png" alt="Proyecto Quick Loans — UX/UI Landing Page" loading="lazy" decoding="async">
+          <div class="project-data-row">
+            <div class="meta-col">
+              <div class="name-box"><div class="tilt"><h3 class="name">Quick Loans – UX/UI Landing Page</h3></div></div>
+              <time class="date-box" datetime="2024-12-20"><div class="tilt">Dec 20, 2024</div></time>
+            </div>
+            <div class="desc">
+              <div class="tilt">
+                <p>Design of a web platform for fast-approval, small-amount loans, with an inclusive and accessible approach. The proposal aims to convey trust, simplicity, and efficiency in every interaction, optimizing the digital flow for a clear and seamless user experience.</p>
+              </div>
+            </div>
+            <a class="project-cta" href="https://www.behance.net/gallery/214967933/Quick-loans-Ux-ui-Landing-page" target="_blank" rel="noopener noreferrer" aria-label="View project: Quick Loans – UX/UI Landing Page">
+              <div class="tilt"><img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" role="listitem">
+          <img class="project-media" src="assets/img/Project 02.png" alt="Proyecto Tech Innovation — Landing Page y Blog" loading="lazy" decoding="async">
+          <div class="project-data-row">
+            <div class="meta-col">
+              <div class="name-box"><div class="tilt"><h3 class="name">Tech Innovation – Landing Page &amp; Blog</h3></div></div>
+              <time class="date-box" datetime="2025-02"><div class="tilt">Feb 2025</div></time>
+            </div>
+            <div class="desc">
+              <div class="tilt">
+                <p>Design of a landing page with an integrated blog focused on development and innovation in technology. Clean structure, easy navigation, and a modern aesthetic for sharing ideas and insights effectively.</p>
+              </div>
+            </div>
+            <a class="project-cta is-disabled" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true" title="Link coming soon">
+              <div class="tilt"><img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" role="listitem">
+          <img class="project-media" src="assets/img/Project 03.png" alt="Proyecto Manifiesto — UI Project" loading="lazy" decoding="async">
+          <div class="project-data-row">
+            <div class="meta-col">
+              <div class="name-box"><div class="tilt"><h3 class="name">Manifiesto – UI Project</h3></div></div>
+              <time class="date-box" datetime="2024-06-29"><div class="tilt">Jun 29, 2024</div></time>
+            </div>
+            <div class="desc">
+              <div class="tilt">
+                <p>Design of a clean and functional interface focused on clarity and easy plan comparison. Built in Figma, exploring layout hierarchy, typography, and color to support user decision-making.</p>
+              </div>
+            </div>
+            <a class="project-cta" href="https://www.behance.net/gallery/198867489/Manifiesto-Ui-proyect-Pricing-page" target="_blank" rel="noopener noreferrer" aria-label="View project: Manifiesto – UI Project">
+              <div class="tilt"><img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" role="listitem">
+          <img class="project-media" src="assets/img/Project 04.png" alt="Proyecto UX/UI Prepaid SIM Mobile App" loading="lazy" decoding="async">
+          <div class="project-data-row">
+            <div class="meta-col">
+              <div class="name-box"><div class="tilt"><h3 class="name">UX/UI Prepaid SIM Mobile App</h3></div></div>
+              <time class="date-box" datetime="2022-08-16"><div class="tilt">Aug 16, 2022</div></time>
+            </div>
+            <div class="desc">
+              <div class="tilt">
+                <p>Mobile app design for managing prepaid SIM cards. A user-friendly interface for checking balance, recharging, and managing plans—built to make everyday actions simple and intuitive.</p>
+              </div>
+            </div>
+            <a class="project-cta" href="https://www.behance.net/gallery/143290357/UXUI-Prepaid-sim-mobile-app" target="_blank" rel="noopener noreferrer" aria-label="View project: UX/UI Prepaid SIM Mobile App">
+              <div class="tilt"><img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+            </a>
+          </div>
+        </article>
+
+        <!-- Lote B (duplicado para loop) -->
+        <article class="project-card" role="listitem" aria-hidden="true">
+          <img class="project-media" src="assets/img/Project 01.png" alt="" loading="lazy" decoding="async">
+          <div class="project-data-row">
+            <div class="meta-col">
+              <div class="name-box"><div class="tilt"><h3 class="name">Quick Loans – UX/UI Landing Page</h3></div></div>
+              <time class="date-box" datetime="2024-12-20"><div class="tilt">Dec 20, 2024</div></time>
+            </div>
+            <div class="desc"><div class="tilt"><p>Design of a web platform for fast-approval, small-amount loans, with an inclusive and accessible approach. The proposal aims to convey trust, simplicity, and efficiency in every interaction, optimizing the digital flow for a clear and seamless user experience.</p></div></div>
+            <a class="project-cta" href="https://www.behance.net/gallery/214967933/Quick-loans-Ux-ui-Landing-page" target="_blank" rel="noopener noreferrer" aria-label="View project: Quick Loans – UX/UI Landing Page">
+              <div class="tilt"><img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" role="listitem" aria-hidden="true">
+          <img class="project-media" src="assets/img/Project 02.png" alt="" loading="lazy" decoding="async">
+          <div class="project-data-row">
+            <div class="meta-col">
+              <div class="name-box"><div class="tilt"><h3 class="name">Tech Innovation – Landing Page &amp; Blog</h3></div></div>
+              <time class="date-box" datetime="2025-02"><div class="tilt">Feb 2025</div></time>
+            </div>
+            <div class="desc"><div class="tilt"><p>Design of a landing page with an integrated blog focused on development and innovation in technology. Clean structure, easy navigation, and a modern aesthetic for sharing ideas and insights effectively.</p></div></div>
+            <a class="project-cta is-disabled" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true" title="Link coming soon">
+              <div class="tilt"><img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" role="listitem" aria-hidden="true">
+          <img class="project-media" src="assets/img/Project 03.png" alt="" loading="lazy" decoding="async">
+          <div class="project-data-row">
+            <div class="meta-col">
+              <div class="name-box"><div class="tilt"><h3 class="name">Manifiesto – UI Project</h3></div></div>
+              <time class="date-box" datetime="2024-06-29"><div class="tilt">Jun 29, 2024</div></time>
+            </div>
+            <div class="desc"><div class="tilt"><p>Design of a clean and functional interface focused on clarity and easy plan comparison. Built in Figma, exploring layout hierarchy, typography, and color to support user decision-making.</p></div></div>
+            <a class="project-cta" href="https://www.behance.net/gallery/198867489/Manifiesto-Ui-proyect-Pricing-page" target="_blank" rel="noopener noreferrer" aria-label="View project: Manifiesto – UI Project">
+              <div class="tilt"><img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" role="listitem" aria-hidden="true">
+          <img class="project-media" src="assets/img/Project 04.png" alt="" loading="lazy" decoding="async">
+          <div class="project-data-row">
+            <div class="meta-col">
+              <div class="name-box"><div class="tilt"><h3 class="name">UX/UI Prepaid SIM Mobile App</h3></div></div>
+              <time class="date-box" datetime="2022-08-16"><div class="tilt">Aug 16, 2022</div></time>
+            </div>
+            <div class="desc"><div class="tilt"><p>Mobile app design for managing prepaid SIM cards. A user-friendly interface for checking balance, recharging, and managing plans—built to make everyday actions simple and intuitive.</p></div></div>
+            <a class="project-cta" href="https://www.behance.net/gallery/143290357/UXUI-Prepaid-sim-mobile-app" target="_blank" rel="noopener noreferrer" aria-label="View project: UX/UI Prepaid SIM Mobile App">
+              <div class="tilt"><img class="icon" src="assets/img/ArrowLineRight.png" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- References -->
+  <section id="references" class="container-fluid">
+    <div class="nav-spacer" aria-hidden="true"></div>
+
+    <div class="section-head refs-head">
+      <h2 class="section-title">References</h2>
+      <div class="desc-rail">
+        <p class="section-desc">
+          These are a few words from people I’ve worked with—managers, teammates, clients & friends. Their feedback highlights collaboration, clear communication, and a user-first mindset, reminding me that good design is always a team effort.
+        </p>
+      </div>
+    </div>
+
+    <div class="refs-grid">
       <article class="ref-card">
         <div class="ref-head">
-          <img class="reference-photo" src="assets/img/Avatar-image-1.png" alt="Ref 1" loading="lazy">
+          <img class="reference-photo" src="assets/img/Avatar-image-1.png" alt="Retrato de Eli" loading="lazy" decoding="async">
         </div>
         <div class="ref-box">
           <div class="ref-content">
-            <p>Su capacidad para transformar una idea inicial en un producto visualmente atractivo y funcional superó nuestras expectativas. Nos guió en cada etapa con claridad y compromiso.</p>
-            <strong>Nombre 1 — Puesto</strong>
+            <p>"Their ability to turn an initial idea into a visually appealing and functional product exceeded our expectations. They guided us through every stage with clarity and commitment."</p>
+            <strong>Eli — Product Manager</strong>
           </div>
         </div>
       </article>
 
       <article class="ref-card">
         <div class="ref-head">
-          <img class="reference-photo" src="assets/img/Avatar-image-2.png" alt="Ref 2" loading="lazy">
+          <img class="reference-photo" src="assets/img/Avatar-image-2.png" alt="Retrato de Daniel" loading="lazy" decoding="async">
         </div>
         <div class="ref-box">
           <div class="ref-content">
-            <p>La colaboración fue muy enriquecedora: comprendió rápidamente lo que necesitábamos, propuso soluciones innovadoras y cuidó cada detalle del diseño final. Sin dudas, lo recomendaría.</p>
-            <strong>Nombre 2 — Puesto</strong>
+            <p>"The collaboration was very enriching: they quickly understood what we needed, proposed innovative solutions, and took care of every detail of the final design. Without a doubt, I would recommend them."</p>
+            <strong>Daniel — CTO</strong>
           </div>
         </div>
       </article>
 
       <article class="ref-card">
         <div class="ref-head">
-          <img class="reference-photo" src="assets/img/Avatar-image-3.png" alt="Ref 3" loading="lazy">
+          <img class="reference-photo" src="assets/img/Avatar-image-3.png" alt="Retrato de Laura" loading="lazy" decoding="async">
         </div>
         <div class="ref-box">
           <div class="ref-content">
-            <p>Trabajar juntos nos permitió lograr un resultado sólido y coherente. No solo aportó su conocimiento técnico, sino también una mirada estratégica que ayudó a mejorar la experiencia del usuario en nuestro servicio digital.</p>
-            <strong>Nombre 3 — Puesto</strong>
+            <p>“Working together allowed us to achieve a solid and coherent result. They contributed technical knowledge and a strategic perspective that improved the user experience.”</p>
+            <strong>Laura — UX Research Lead</strong>
           </div>
         </div>
       </article>
 
       <article class="ref-card">
         <div class="ref-head">
-          <img class="reference-photo" src="assets/img/Avatar-image-4.png" alt="Ref 4" loading="lazy">
+          <img class="reference-photo" src="assets/img/Avatar-image-4.png" alt="Retrato de Miguel" loading="lazy" decoding="async">
         </div>
         <div class="ref-box">
           <div class="ref-content">
-            <p>Me sorprendió la creatividad en la propuesta y cómo supo adaptarla a nuestras necesidades específicas.</p>
-            <strong>Nombre 4 — Puesto</strong>
+            <p>“I was impressed by the creativity of the proposal and how they adapted it to our specific needs.”</p>
+            <strong>Miguel — Dev College</strong>
           </div>
         </div>
       </article>
 
       <article class="ref-card">
         <div class="ref-head">
-          <img class="reference-photo" src="assets/img/Avatar-image-1.png" alt="Ref 5" loading="lazy">
+          <img class="reference-photo" src="assets/img/Avatar-image-5.png" alt="Retrato de Ema" loading="lazy" decoding="async">
         </div>
         <div class="ref-box">
           <div class="ref-content">
-            <p>Profesionalidad de principio a fin. La interacción fue sencilla y los resultados, de alto nivel.</p>
-            <strong>Nombre 5 — Puesto</strong>
-          </div>
-        </div>
-      </article>
-
-      <article class="ref-card">
-        <div class="ref-head">
-          <img class="reference-photo" src="assets/img/Avatar-image-2.png" alt="Ref 6" loading="lazy">
-        </div>
-        <div class="ref-box">
-          <div class="ref-content">
-            <p>El proyecto se entregó en tiempo y forma, con una comunicación clara durante todo el proceso.</p>
-            <strong>Nombre 6 — Puesto</strong>
-          </div>
-        </div>
-      </article>
-
-      <article class="ref-card">
-        <div class="ref-head">
-          <img class="reference-photo" src="assets/img/Avatar-image-3.png" alt="Ref 7" loading="lazy">
-        </div>
-        <div class="ref-box">
-          <div class="ref-content">
-            <p>Excelente trabajo, cumplió con lo esperado y más.</p>
-            <strong>Nombre 7 — Puesto</strong>
-          </div>
-        </div>
-      </article>
-
-      <article class="ref-card">
-        <div class="ref-head">
-          <img class="reference-photo" src="assets/img/Avatar-image-4.png" alt="Ref 8" loading="lazy">
-        </div>
-        <div class="ref-box">
-          <div class="ref-content">
-            <p>Gran predisposición y calidad en los detalles. Muy buena experiencia, volvería a contratar</p>
-            <strong>Nombre 8 — Puesto</strong>
-          </div>
-        </div>
-      </article>
-
-      <!-- ===== DUPLICADO de cards para loop continuo ===== -->
-      <article class="ref-card">
-        <div class="ref-head">
-          <img class="reference-photo" src="assets/img/Avatar-image-1.png" alt="Ref 1 duplicate" loading="lazy">
-        </div>
-        <div class="ref-box">
-          <div class="ref-content">
-            <p>Desarrollo maquetas interactivas que ayudan a probar conceptos y flujos de trabajo antes de la implementación.</p>
-            <strong>Nombre 1 — Puesto</strong>
-          </div>
-        </div>
-      </article>
-
-      <article class="ref-card">
-        <div class="ref-head">
-          <img class="reference-photo" src="assets/img/Avatar-image-2.png" alt="Ref 2 duplicate" loading="lazy">
-        </div>
-        <div class="ref-box">
-          <div class="ref-content">
-            <p>Creo maquetas interactivas para validar ideas y flujos de trabajo antes de su implementación.</p>
-            <strong>Nombre 2 — Puesto</strong>
-          </div>
-        </div>
-      </article>
-
-      <article class="ref-card">
-        <div class="ref-head">
-          <img class="reference-photo" src="assets/img/Avatar-image-3.png" alt="Ref 3 duplicate" loading="lazy">
-        </div>
-        <div class="ref-box">
-          <div class="ref-content">
-            <p>Prototipos interactivos para explorar ideas y optimizar decisiones en el proceso de diseño.</p>
-            <strong>Nombre 3 — Puesto</strong>
-          </div>
-        </div>
-      </article>
-
-      <article class="ref-card">
-        <div class="ref-head">
-          <img class="reference-photo" src="assets/img/Avatar-image-4.png" alt="Ref 4 duplicate" loading="lazy">
-        </div>
-        <div class="ref-box">
-          <div class="ref-content">
-            <p>Prototipos que facilitan la experimentación de conceptos y flujos de trabajo.</p>
-            <strong>Nombre 4 — Puesto</strong>
-          </div>
-        </div>
-      </article>
-
-      <article class="ref-card">
-        <div class="ref-head">
-          <img class="reference-photo" src="assets/img/Avatar-image-1.png" alt="Ref 5 duplicate" loading="lazy">
-        </div>
-        <div class="ref-box">
-          <div class="ref-content">
-            <p>Iteraciones rápidas para validar con usuarios antes del desarrollo.</p>
-            <strong>Nombre 5 — Puesto</strong>
-          </div>
-        </div>
-      </article>
-
-      <article class="ref-card">
-        <div class="ref-head">
-          <img class="reference-photo" src="assets/img/Avatar-image-2.png" alt="Ref 6 duplicate" loading="lazy">
-        </div>
-        <div class="ref-box">
-          <div class="ref-content">
-            <p>Diseño centrado en el usuario con foco en eficiencia y claridad.</p>
-            <strong>Nombre 6 — Puesto</strong>
-          </div>
-        </div>
-      </article>
-
-      <article class="ref-card">
-        <div class="ref-head">
-          <img class="reference-photo" src="assets/img/Avatar-image-3.png" alt="Ref 7 duplicate" loading="lazy">
-        </div>
-        <div class="ref-box">
-          <div class="ref-content">
-            <p>Prototipos navegables para validar flujos críticos.</p>
-            <strong>Nombre 7 — Puesto</strong>
-          </div>
-        </div>
-      </article>
-
-      <article class="ref-card">
-        <div class="ref-head">
-          <img class="reference-photo" src="assets/img/Avatar-image-4.png" alt="Ref 8 duplicate" loading="lazy">
-        </div>
-        <div class="ref-box">
-          <div class="ref-content">
-            <p>Investigación y pruebas de usabilidad para decisiones informadas.</p>
-            <strong>Nombre 8 — Puesto</strong>
+            <p>Professional from start to finish. The interaction was straightforward and the results were top-notch.</p>
+            <strong>Ema — Head of Design</strong>
           </div>
         </div>
       </article>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Contact -->
+  <section id="contact" class="container-fluid">
+    <h2 class="section-title">Contact me</h2>
 
+    <div class="contact-layout">
+      <figure class="contact-media">
+        <img src="assets/img/Contact photo.png" alt="Ilustración de contacto" loading="lazy" decoding="async">
+      </figure>
 
-
-
-
-
-
-
-
-    <!-- Contact -->
-    <section id="contact" class="container-fluid">
-        <h2 class="section-title">Contact me</h2>
-
-        <div class="contact-layout">
-            <figure class="contact-media">
-                <img src="assets/img/Contact photo.png" alt="Contact illustration">
-            </figure>
-
-            <form class="contact-form" action="#" method="post" novalidate>
-                <div class="field">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name" placeholder="Ingresar nombre">
-                </div>
-
-                <div class="field">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Ingresar email">
-                </div>
-
-                <div class="field">
-                    <label for="project">Acerca del proyecto</label>
-                    <textarea id="project" name="project" rows="6"
-                        placeholder="Ingresar información extra sobre el proyecto"></textarea>
-                </div>
-
-                <div class="checks">
-                    <p class="checks-title">¿Cómo te puedo ayudar?</p>
-                    <div class="checks-list">
-                        <label class="check-item">
-                            <input class="check" type="checkbox" name="help" value="web">
-                            <span>Website design</span>
-                        </label>
-                        <label class="check-item">
-                            <input class="check" type="checkbox" name="help" value="app">
-                            <span>App design</span>
-                        </label>
-                        <label class="check-item">
-                            <input class="check" type="checkbox" name="help" value="research">
-                            <span>Research</span>
-                        </label>
-                        <label class="check-item">
-                            <input class="check" type="checkbox" name="help" value="proto">
-                            <span>Prototyping</span>
-                        </label>
-                        <label class="check-item">
-                            <input class="check" type="checkbox" name="help" value="comm">
-                            <span>Project communication</span>
-                        </label>
-                    </div>
-                </div>
-
-                <a href="#" class="btn">SEND MESSAGE</a>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="container-fluid">
-        <div class="social-icons" aria-label="Social links">
-            <a href="https://wa.me/5493512630020" target="_blank" rel="noopener">
-                <img src="assets/img/WhatsappLogo.png" alt="WhatsApp">
-            </a>
-            <a href="https://www.linkedin.com/in/lovecchiomatias/" target="_blank" rel="noopener">
-                <img src="assets/img/LinkedinLogo.png" alt="LinkedIn">
-            </a>
-            <a href="https://www.behance.net/matiaslovecchio" target="_blank" rel="noopener">
-                <img src="assets/img/BehanceLogo.png" alt="Behance">
-            </a>
+      <form class="contact-form" action="#" method="post" novalidate>
+        <div class="field">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name — so I can address you properly" autocomplete="name">
         </div>
 
-        <p class="footer-cta">Hey, what’s holding you back from dropping me a text? :) </p>
-        <p class="copyright">© 2025 copyright all right reserved</p>
-    </footer>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="you@company.com — I’ll send my reply here" autocomplete="email" inputmode="email">
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        <div class="field">
+          <label for="project">Tell me about the project</label>
+          <textarea id="project" name="project" rows="6" placeholder="Goals, target users & deadline — helps me scope and estimate"></textarea>
+        </div>
+
+        <div class="checks">
+          <p class="checks-title">How do you think I could help you?</p>
+          <div class="checks-list">
+            <label class="check-item">
+              <input class="check" type="checkbox" name="help" value="web">
+              <span>Website design</span>
+            </label>
+            <label class="check-item">
+              <input class="check" type="checkbox" name="help" value="app">
+              <span>App design</span>
+            </label>
+            <label class="check-item">
+              <input class="check" type="checkbox" name="help" value="research">
+              <span>Research</span>
+            </label>
+            <label class="check-item">
+              <input class="check" type="checkbox" name="help" value="proto">
+              <span>Prototyping</span>
+            </label>
+            <label class="check-item">
+              <input class="check" type="checkbox" name="help" value="comm">
+              <span>Project communication</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn">SEND MESSAGE</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="container-fluid">
+    <div class="social-icons" aria-label="Social links">
+      <a href="https://wa.me/5493512630020" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/WhatsappLogo.png" alt="WhatsApp" loading="lazy" decoding="async">
+      </a>
+      <a href="https://www.linkedin.com/in/lovecchiomatias/" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/LinkedinLogo.png" alt="LinkedIn" loading="lazy" decoding="async">
+      </a>
+      <a href="https://www.behance.net/matiaslovecchio" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/BehanceLogo.png" alt="Behance" loading="lazy" decoding="async">
+      </a>
+    </div>
+
+    <p class="footer-cta">Hey, what’s holding you back from dropping me a text? :) </p>
+    <p class="copyright">© 2025 copyright all right reserved</p>
+  </footer>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
 </body>
-
 </html>

@@ -1,209 +1,244 @@
-/* =======================  REFERENCES  ======================= */
-#references {
-  --stroke: #353535;
-  --gap: 24px;
-  --marquee-duration: 15s;
-  --pad-x: 48px;
-  --pad-y: 64px;
-  --max-card-text: 520px;
-  --hover-bleed: 32px;
-  --b: 4px;
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
 
-  font-family: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background: #FAFAFA;
-  padding-block: var(--pad-y);
+/* ======================= REFERENCES ======================= */
+#references {
+  /* Offsets locales (para separar el contenido del navbar) */
+  --nav-offset: 64px;
+  @media (max-width: $bp-lg) { --nav-offset: 56px; }
+
+  /* Variables locales */
+  --gap: #{$space-24};
+  --pad-x: #{$space-48};
+  --pad-y: #{$space-36};
+  --head-to-grid-gap: #{$space-32};
+  --grid-pad-top: #{$space-24};
+  --max-card-text: #{$max-card-text};
+  --ref-text-gap: #{$space-14};
+
+  font-family: $ff-base;
+  background: $color-bg-dark;
+  color: $color-text-light;
+
+  /* Espaciado lateral interno */
+  &:is(section).container-fluid {
+    padding-left: var(--pad-x) !important;
+    padding-right: var(--pad-x) !important;
+  }
+
+  /* Separación vertical de la sección */
+  padding-top: var(--pad-y);
+  padding-bottom: 0;
+
+  /* Margen de desplazamiento al navegar */
+  scroll-margin-top: calc(var(--nav-offset) + 8px);
+
+  /* Espaciador invisible para compensar la altura del navbar */
+  .nav-spacer {
+    block-size: var(--nav-offset);
+    inline-size: 100%;
+    pointer-events: none;
+  }
+
+  /* ===== Cabecera (título + descripción) ===== */
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    margin: 0;
+  }
 
   .section-title {
     display: inline-block;
-    margin-bottom: 24px;
+    margin: 0;
+    padding: $space-8;
+    background: $color-text-light;
+    color: $color-bg-dark;
+    line-height: 1;
   }
 
-  .refs-marquee {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 24px var(--pad-x);
-
-    &:hover .refs-track {
-      animation-play-state: paused;
-    }
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      width: var(--pad-x);
-      height: 100%;
-      pointer-events: none;
-      z-index: 2;
-    }
-    &::before {
-      left: 0;
-      background: linear-gradient(to right, #fafafa, transparent);
-    }
-    &::after {
-      right: 0;
-      background: linear-gradient(to left, #fafafa, transparent);
-    }
+  .section-head > .desc-rail {
+    flex: 1 1 auto;
+    min-width: 0;
+    border: $border-w solid $color-text-light;
+    background: $color-bg-dark;
+    padding: $space-16 $space-24;
   }
 
-  /* ===== TRACK ===== */
-  .refs-track {
+  .section-head > .desc-rail > .section-desc {
+    margin: 0;
+    font: 400 32px $ff-base;
+    line-height: 1.2;
+    color: $color-text-light;
+  }
+
+  /* ===== Grid principal de Cards ===== */
+  > .section-head + .refs-grid {
+    margin-top: var(--head-to-grid-gap) !important;
+    padding-top: var(--grid-pad-top) !important;
+  }
+
+  .refs-grid {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: flex-start;
-    flex-wrap: nowrap;
-    will-change: transform;
-    animation: refs-marquee-scroll var(--marquee-duration) linear infinite;
-    padding-block: var(--hover-bleed);
-
-    gap: 0 !important;
-
-    padding-left: var(--gap);
+    gap: var(--gap);
+    padding-bottom: $space-64;
   }
 
-  .refs-track > .ref-card {
-    margin-left: var(--gap) !important;
-  }
-  .refs-track > article.ref-card:first-of-type {
-    margin-left: 0 !important; /* primera card no suma extra */
-  }
-
-  /* ===== CARD ===== */
+  /* ===== Cards individuales ===== */
   .ref-card {
     position: relative;
     overflow: visible;
-    flex: 0 0 clamp(280px, 28vw, 380px);
+    flex: 0 1 clamp(280px, 28vw, 380px);
     display: grid;
     grid-template-rows: auto auto;
     min-width: 260px;
+    z-index: 1;
 
     .ref-head,
     .ref-box {
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      @include smooth(transform, .25s, ease);
+      @include smooth(box-shadow, .25s, ease);
       transform-origin: center;
-      will-change: transform;
     }
 
     .ref-head {
       line-height: 0;
       position: relative;
       z-index: 2;
-    }
 
-    .reference-photo {
-      width: var(--avatar);
-      height: var(--avatar);
-      object-fit: cover;
-      display: block;
-      background: #FAFAFA;
-      border: var(--b) solid var(--stroke);
+      .reference-photo {
+        display: block;
+        object-fit: cover;
+        background: $color-text-light;
+        border: $border-w solid $color-text-light;
+      }
     }
 
     .ref-box {
       position: relative;
       z-index: 1;
-      border: var(--b) solid var(--stroke);
-      background: #FAFAFA;
-      padding: 16px;
+      border: $border-w solid $color-text-light;
+      background: $color-text-light;
+      padding: $space-16;
       display: flex;
       flex-direction: column;
-      gap: 16px;
-      margin-top: calc(-1 * var(--b)); 
-      margin-left: 0; 
-      overflow: visible;
+      gap: $space-16;
+      margin-top: calc(-1 * #{$border-w});
 
       .ref-content {
         max-height: var(--max-card-text);
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: var(--ref-text-gap);
 
         p {
           margin: 0;
-          font-family: inherit;
           font-weight: 400;
           font-size: 2rem;
           line-height: 1.25;
-          color: #353535;
-
+          color: $color-bg-dark;
           display: -webkit-box;
           -webkit-box-orient: vertical;
           overflow: hidden;
-          line-clamp: 12;         
-          -webkit-line-clamp: 12; 
+          line-clamp: 12;
+          -webkit-line-clamp: 12;
         }
 
         strong {
+          margin: 0;
           display: block;
-          font-family: inherit;
           font-weight: 700;
           font-size: 1.5rem;
           line-height: 1.1;
-          color: #353535;
+          color: $color-bg-dark;
         }
       }
     }
 
+    /* hover */
     &:hover {
       z-index: 10;
-
-      .ref-head {
-        transform: rotate(3deg);
-      }
-      .ref-box {
-        transform: rotate(3deg);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-      }
-    }
-  }
-
-  @keyframes refs-marquee-scroll {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
+      .ref-head { transform: rotate(3deg); }
+      .ref-box  { transform: rotate(3deg); box-shadow: 0 8px 16px rgba(0, 0, 0, .28); }
     }
   }
 
   /* ===== Responsive ===== */
   @media (max-width: 1100px) {
-    .ref-card {
-      flex-basis: clamp(280px, 42vw, 380px);
-    }
+    .ref-card { flex-basis: clamp(280px, 42vw, 380px); }
   }
 
-  @media (max-width: 800px) {
-    --avatar: 84px;
-    --gap: 16px;
-    --marquee-duration: 35s;
+  @media (max-width: $bp-md) {
+    --gap: #{$space-16};
     --max-card-text: 420px;
-    --hover-bleed: 16px;
+    --ref-text-gap: 10px;
+
+    .section-head { flex-direction: column; gap: $space-12; }
 
     .ref-card .ref-box .ref-content {
       p {
         font-size: clamp(1.25rem, 4.8vw, 1.5rem);
-
-        display: -webkit-box;
         -webkit-box-orient: vertical;
         overflow: hidden;
         line-clamp: 10;
         -webkit-line-clamp: 10;
       }
-
-      strong {
-        font-size: clamp(1rem, 3.8vw, 1.25rem);
-      }
+      strong { font-size: clamp(1rem, 3.8vw, 1.25rem); }
     }
   }
 
+  /* ===== Accesibilidad ===== */
   @media (prefers-reduced-motion: reduce) {
-    .refs-track {
-      animation: none;
-      transform: none;
-    }
-    .ref-head,
-    .ref-box {
-      transition: none;
-    }
+    .ref-head, .ref-box { transition: none; }
   }
+}
+
+/* ===== Estructura general: footer fijo y sección a altura completa ===== */
+html, body { height: 100%; }
+body {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+header, footer { flex: 0 0 auto; }
+#references {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+#references .section-head { margin-top: auto; }
+#references .refs-grid   { margin-bottom: auto; }
+
+#references + footer { margin-top: 0 !important; }
+
+/* ===== Espaciado extra cuando #references aparece dentro de Home ===== */
+#references ~ section { margin-top: $space-64; }
+@media (max-width: $bp-lg) { #references ~ section { margin-top: $space-48; } }
+
+/* ===== Botón activo del menú — solo en References ===== */
+.references-page .menu .btn.btn-secondary.active,
+:root:has(#references) .menu .btn.btn-secondary.active {
+  background: $accent-green;
+  color: $color-bg-dark;
+  border-color: $color-stroke;
+  transform: none;
+  box-shadow: none;
+}
+.references-page .menu .btn.btn-secondary.active:hover,
+.references-page .menu .btn.btn-secondary.active:focus,
+.references-page .menu .btn.btn-secondary.active:active,
+:root:has(#references) .menu .btn.btn-secondary.active:hover,
+:root:has(#references) .menu .btn.btn-secondary.active:focus,
+:root:has(#references) .menu .btn.btn-secondary.active:active {
+  background: $accent-green;
+  color: $color-bg-dark;
+  border-color: $color-stroke;
+  transform: none !important;
+  box-shadow: none !important;
 }

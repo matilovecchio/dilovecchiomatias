@@ -1,23 +1,23 @@
 :root {
-    --section-pad: 32px;
+  --section-pad: 32px;
 }
 
 @media (max-width: 900px) {
-    :root {
-        --section-pad: 56px;
-    }
+  :root {
+    --section-pad: 56px;
+  }
 }
 
-section.container-fluid {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+section.container-fluid:not(#services) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .section-title {
-    font: 100 64px "Public Sans", sans-serif;
-    padding: 8px;
-    background: #353535;
-    color: #fafafa;
-    display: inline-block;
-    margin-bottom: 0;
+  font: 100 64px "Public Sans", sans-serif;
+  padding: 8px;
+  background: #353535;
+  color: #fafafa;
+  display: inline-block;
+  margin-bottom: 0;
 }

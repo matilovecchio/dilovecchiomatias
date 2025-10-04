@@ -1,0 +1,48 @@
+// ======================
+// MIXINS REUTILIZABLES
+// ======================
+
+// Media query rápida
+@mixin respond($min-width) {
+  @media (min-width: $min-width) { @content; }
+}
+
+// Padding de sección (vertical, horizontal)
+@mixin section-padding($py, $px) {
+  padding: $py $px;
+}
+
+// Stroke (borde tipo contorno)
+@mixin stroke($color, $width: 1px) {
+  outline: $width solid $color;
+  outline-offset: 0;
+}
+
+// Transiciones suaves
+@mixin smooth($props: all, $time: .25s, $ease: ease) {
+  transition: $props $time $ease;
+}
+
+// Hover con color de acento
+@mixin hover-accent($accent-color) {
+  @include smooth(background-color);
+  &:hover {
+    background-color: $accent-color;
+  }
+}
+
+// Tipografía fluida con clamp
+@mixin fluid-type($min, $max) {
+  font-size: clamp($min, 2.5vw, $max);
+}
+
+// Botón genérico con variantes
+@mixin btn-variant($fg, $bg, $bd: $bg) {
+  color: $fg;
+  background-color: $bg;
+  border: 1px solid $bd;
+  @include smooth(background-color);
+  &:hover { background-color: mix(#000, $bg, 10%); }
+}
+
+

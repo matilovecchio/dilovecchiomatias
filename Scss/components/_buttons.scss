@@ -1,76 +1,85 @@
-/* Botones generales */
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+/* ========== BUTTONS ========== */
+
+/* Botón base */
 .btn {
     display: inline-block;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: .3px;
-    border: 4px solid #353535;
-    background: #353535;
-    color: #FAFAFA;
-    padding: 8px 20px;
+    border: $border-w solid $color-bg-dark;
+    background: $color-bg-dark;
+    color: $color-text-light;
+    padding: $space-8 20px;
+    /* mantener 20px según diseño */
     min-height: 44px;
     text-align: center;
     cursor: pointer;
     text-decoration: none;
-    transition: background .25s, color .25s, border-color .25s;
+    @include smooth(all, .25s);
 
     &:hover,
     &:focus-visible {
-        background: #7FFE93;
-        color: #353535;
-        border-color: #353535;
+        background: $accent-green;
+        color: $color-bg-dark;
+        border-color: $color-bg-dark;
         outline: none;
     }
 }
 
-/* Hero buttons */
+/* Grupo de botones del hero */
 .button-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: $space-16;
     width: 100%;
 
     .btn {
         display: flex;
         align-items: center;
         justify-content: center;
-        text-transform: uppercase;
-        font-family: "Public Sans", sans-serif;
+        font-family: $ff-base;
         font-weight: 600;
         font-size: 24px;
         line-height: 1;
         min-height: 44px;
-        padding: 8px 20px;
+        padding: $space-8 20px;
         border-radius: 0;
-        transition: background .25s, color .25s, border-color .25s;
+        @include smooth(all, .25s);
 
+        /* Secundario (fondo claro, texto oscuro) */
         &.btn-secondary {
-            background: #FAFAFA !important;
-            color: #353535 !important;
-            border: 4px solid #353535 !important;
+            background: $color-text-light;
+            color: $color-bg-dark;
+            border: $border-w solid $color-bg-dark;
 
-            &:hover {
-                background: #7FFE93 !important;
-                color: #353535 !important;
-                border-color: #353535 !important;
+            &:hover,
+            &:focus-visible {
+                background: $accent-green;
+                color: $color-bg-dark;
+                border-color: $color-bg-dark;
             }
         }
 
+        /* Primario del hero (fondo oscuro con borde claro) */
         &.btn-primary.hero-primary {
-            background: #353535 !important;
-            color: #FAFAFA !important;
-            border: 4px solid #FAFAFA !important;
+            background: $color-bg-dark;
+            color: $color-text-light;
+            border: $border-w solid $color-text-light;
 
-            &:hover {
-                background: #7FFE93 !important;
-                color: #4618AF !important;
-                border-color: #7FFE93 !important;
+            &:hover,
+            &:focus-visible {
+                color: $accent-green;
+                border-color: $accent-green;
+                background: $color-bg-dark;
             }
         }
     }
 }
 
-/* Ajuste bootstrap */
+/* Ajuste Bootstrap: bordes rectos */
 .btn,
 .btn-primary,
 .btn-secondary,
@@ -79,16 +88,16 @@
     border-radius: 0 !important;
 }
 
-/* Contact form button */
+/* Botón del formulario de contacto: ancho alineado con inputs */
 .contact-form {
     .btn {
         display: block;
-        width: calc(100% + var(--pl) + var(--bw));
-        margin-left: calc(-1 * (var(--pl) + var(--bw)));
+        margin-left: calc(-1 * (#{$space-16} + #{$border-w}));
+        width: calc(100% + #{$space-16} + #{$border-w});
 
-        @media (max-width: 900px) {
-            width: 100%;
+        @media (max-width: $bp-lg) {
             margin-left: 0;
+            width: 100%;
         }
     }
 }

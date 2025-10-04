@@ -1,10 +1,14 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
 /* ========== HEADER (navbar) ========== */
 header {
+  /* Posición original */
   position: absolute;
   inset: 0 0 auto 0;
   width: 100%;
   z-index: 1000;
-  background: transparent;
+  background-color: transparent;
 
   .header-container {
     display: flex;
@@ -12,14 +16,16 @@ header {
     justify-content: space-between;
     width: 100%;
     margin: 0;
-    padding: 20px 36px;
-    background: transparent;
+    padding: $space-24 $space-36; 
+    background-color: transparent;
 
-    .logo img {
-      width: 60px;
-      height: 60px;
-      display: block;
-      object-fit: contain;
+    .logo {
+      img {
+        width: 60px;
+        height: 60px;
+        display: block;
+        object-fit: contain;
+      }
     }
 
     nav {
@@ -43,44 +49,100 @@ header {
             align-items: center;
             justify-content: center;
             height: 50px;
-            padding: 8px 20px;
-            border: 4px solid #353535;
+            padding: $space-8 $space-24; 
+            border: $border-w solid $color-bg-dark;
             text-decoration: none;
-            font-family: "Public Sans", sans-serif;
+            font-family: $ff-base;
             text-transform: uppercase;
             font-weight: 600;
             font-size: 24px;
-            background: #FAFAFA;
-            color: #353535;
-            transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+
+            /* Fondo claro por defecto */
+            background-color: $color-text-light;
+            color: $color-bg-dark;
+
+            @include smooth(transform, .25s, ease);
+            @include smooth(box-shadow, .25s, ease);
+            @include smooth(background, .25s, ease);
+            @include smooth(color, .25s, ease);
 
             &:hover {
-              background: #7FFE93;
-              border-color: #353535;
-              color: #353535;
+              background-color: $accent-green;
+              border-color: $color-bg-dark;
+              color: $color-bg-dark;
               transform: rotate(3deg) scale(1.1);
-              box-shadow: 0 6px 12px rgba(0,0,0,.12);
+              box-shadow: 0 6px 12px rgba(0, 0, 0, .12);
             }
 
+            /* Activo (estado base) */
             &.active {
-              background: #353535;
-              border-color: #353535;
-              color: #FAFAFA;
+              background-color: $color-bg-dark;
+              border-color: $color-bg-dark;
+              color: $color-text-light;
+            }
+
+            &:focus-visible {
+              outline: 3px dashed $color-bg-dark;
+              outline-offset: 2px;
             }
 
             &:active {
-              background: #7FFE93;
-              border-color: #353535;
-              color: #353535;
+              background-color: $accent-green;
+              border-color: $color-bg-dark;
+              color: $color-bg-dark;
             }
           }
 
-          & + li a { margin-left: -4px; }
+          /* Une los bordes entre tabs */
+          & + li {
+            a { margin-left: -$border-w; }
+          }
         }
       }
     }
   }
 
+
+
+  :root:has(#references) & .menu a.active,
+  .references-page & .menu a.active {
+    background: $accent-green;
+    color: $color-bg-dark;
+    border-color: $color-stroke;
+    transform: none;
+    box-shadow: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: $accent-green;
+      color: $color-bg-dark;
+      border-color: $color-stroke;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  :root:has(#services) & .menu a.active,
+  .services-page & .menu a.active {
+    background: $accent-green;
+    color: $color-bg-dark;
+    border-color: $color-stroke;
+    transform: none;
+    box-shadow: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: $accent-green;
+      color: $color-bg-dark;
+      border-color: $color-stroke;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  /* Breakpoints de navbar */
   @media (max-width: 840px) {
     nav {
       width: 100%;
@@ -90,23 +152,27 @@ header {
         justify-content: flex-end;
         align-content: flex-start;
 
-        li { margin-top: -4px; }
-        li + li a { margin-left: -4px; }
+        li { margin-top: -$border-w; }
+        li + li a { margin-left: -$border-w; }
 
         a {
           font-size: 20px;
           height: 44px;
-          padding: 8px 16px;
+          padding: $space-8 $space-16;
         }
       }
     }
   }
 
   @media (max-width: 520px) {
-    nav .menu a {
-      font-size: 18px;
-      height: 40px;
-      padding: 6px 12px;
+    nav {
+      .menu {
+        a {
+          font-size: 18px;
+          height: 40px;
+          padding: $space-6 $space-12;
+        }
+      }
     }
   }
 }

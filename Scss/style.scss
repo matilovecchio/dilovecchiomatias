@@ -1,22 +1,52 @@
 /* scss/style.scss */
 
 /* 1) Base */
-@import "base/_reset";
-@import "base/_variables";
-@import "base/_mixins";
-@import "base/_generales";
+@use "base/reset";
+@use "base/variables" as *;
+@use "base/mixins" as *;
+@use "base/generales";
 
 /* 2) Components */
-@import "components/_buttons";
-@import "components/_navbar";
-@import "components/_footer";
+@use "components/buttons";
+@use "components/navbar";
+@use "components/footer";
 
 /* 3) Sections */
-@import "sections/_home";
-@import "sections/_about";
-@import "sections/_services";
-@import "sections/_projects";
-@import "sections/_contact";
-@import "sections/_references"; 
+@use "sections/home";
+@use "sections/about";
+@use "sections/services";
+@use "sections/projects";
+@use "sections/contact";
+@use "sections/references";
 
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&display=swap");
+
+.visually-hidden-focusable {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap; 
+  border: 0;
+
+  &:focus,
+  &:active {
+    position: fixed !important;
+    top: $space-8;
+    left: $space-8;
+    width: auto;
+    height: auto;
+    padding: $space-8 $space-12;
+    clip: auto;
+    overflow: visible;
+    white-space: normal;
+    background: $color-bg-dark;
+    color: $color-text-light;
+    border-radius: $space-4;
+    z-index: 10000;
+    text-decoration: none;
+  }
+}

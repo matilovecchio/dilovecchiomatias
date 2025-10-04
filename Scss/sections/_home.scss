@@ -1,58 +1,71 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
 /* ========== HOME ========== */
 #home {
-    padding: 0;
+  padding: 0;
 
-    .hero-banner {
-        position: relative;
-        height: 500px;
-        background-image: url("../img/imagen de portada.png");
-        background-size: cover;
-        background-position: center;
+  .hero-banner {
+    position: relative;
+    height: 500px;
+    background-image: url("../img/imagen%20de%20portada.png");
+    background-size: cover;
+    background-position: center;
 
-        .hero-photo {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            width: 223px;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-            border: 0;
-        }
+    .hero-photo {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 300px;
+      height: 296px;
+      object-fit: cover;
+      display: block;
+      border: 0;
     }
+  }
 
-    .hero-inner {
-        background: #353535;
-        padding: 36px 0;
+  .hero-inner {
+    background: $color-bg-dark;
+    @include section-padding($space-36, $space-48);
+  }
+
+  .hero-text {
+    color: $color-text-light;
+
+    > .btn {
+      margin-top: $space-16;
     }
+  }
 
-    .hero-text {
-        color: #FAFAFA;
-    }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-16;
+    margin-top: $space-16;
+  }
 
-    .hero-name {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        margin: 0 0 12px 0;
-        font-family: "Public Sans", sans-serif;
-        font-weight: 100;
-        font-size: 120px;
-        line-height: 88px;
-        letter-spacing: 1px;
-        color: #FAFAFA;
+  .hero-name {
+    display: flex;
+    flex-direction: column;
+    gap: $space-16;
+    margin: 0 0 $space-12 0;
+    font-family: $ff-base;
+    font-weight: 100;
+    font-size: 120px;
+    line-height: 88px;
+    letter-spacing: 1px;
+    color: $color-text-light;
 
-        >span {
-            display: block;
-        }
-    }
+    > span { display: block; }
+  }
 
-    h2.thin {
-        margin: 0 0 20px 0;
-        font: 100 64px "Public Sans", sans-serif;
-        line-height: 50px;
-        color: #FAFAFA;
-        opacity: .9;
-    }
-
+  h2.thin {
+    margin: 0 0 $space-48 0;
+    font-family: $ff-base;
+    font-weight: 100;
+    font-size: 64px;
+    line-height: 50px;
+    color: $color-text-light;
+    opacity: .9;
+  }
 }
